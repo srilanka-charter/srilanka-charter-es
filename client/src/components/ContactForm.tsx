@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
+import { trpc } from "@/lib/trpc";
 
 interface ContactFormProps {
   compact?: boolean;
@@ -9,21 +10,39 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [, navigate] = useLocation();
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const sendInquiry = trpc.contact.sendInquiry.useMutation();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const lines: string[] = [];
-    data.forEach((value, key) => {
-      lines.push(key + ": " + value.toString());
-    });
-    if (startDate) lines.push("Fecha inicio: " + startDate);
-    if (endDate) lines.push("Fecha fin: " + endDate);
-    const body = lines.join("\n");
-    window.location.href =
-      "mailto:info@srilanka-charter.com?subject=Consulta de Charter Sri Lanka&body=" +
-      encodeURIComponent(body);
-    navigate("/gracias");
+
+    try {
+      await sendInquiry.mutateAsync({
+        fullName: data.get("name") as string,
+        country: data.get("country") as string,
+        email: data.get("email") as string,
+        phone: (data.get("phone") as string) || undefined,
+        startDate: startDate || undefined,
+        endDate: endDate || undefined,
+        startLocation: (data.get("pickup") as string) || undefined,
+        adults: (data.get("adults") as string) || undefined,
+        children: (data.get("children") as string) || undefined,
+        vehicleType: (data.get("vehicle") as string) || undefined,
+        currency: (data.get("currency") as string) || undefined,
+        notes: (data.get("notes") as string) || undefined,
+      });
+      navigate("/gracias");
+    } catch (err) {
+      setError("Hubo un error al enviar su consulta. Por favor, inténtelo de nuevo.");
+      setSubmitting(false);
+    }
   };
 
   const inputClass =
@@ -54,6 +73,21 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
         <select name="country" required defaultValue="" className={selectClass}>
           <option value="" disabled>— Seleccione su país —</option>
           <option>España</option>
+          <option>México</option>
+          <option>Argentina</option>
+          <option>Colombia</option>
+          <option>Chile</option>
+          <option>Perú</option>
+          <option>Venezuela</option>
+          <option>Ecuador</option>
+          <option>Bolivia</option>
+          <option>Uruguay</option>
+          <option>Paraguay</option>
+          <option>Costa Rica</option>
+          <option>Panamá</option>
+          <option>Guatemala</option>
+          <option>Cuba</option>
+          <option>República Dominicana</option>
           <option>Reino Unido</option>
           <option>Estados Unidos</option>
           <option>Francia</option>
@@ -196,14 +230,21 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
         />
       </div>
 
+      {error && (
+        <p className="text-red-400 text-xs text-center border border-red-400/20 rounded px-3 py-2.5 bg-red-400/5">
+          {error}
+        </p>
+      )}
+
       <p className="text-white/50 text-xs text-center border border-white/10 rounded px-3 py-2.5 bg-white/5">
         ※ Tras recibir su consulta, le responderemos en inglés.
       </p>
       <button
         type="submit"
-        className="w-full bg-[#C9A84C] text-[#0e0e0e] font-bold text-sm tracking-wider uppercase py-3.5 rounded hover:bg-[#b8963e] transition-colors"
+        disabled={submitting}
+        className="w-full bg-[#C9A84C] text-[#0e0e0e] font-bold text-sm tracking-wider uppercase py-3.5 rounded hover:bg-[#b8963e] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Enviar Consulta
+        {submitting ? "Enviando..." : "Enviar Consulta"}
       </button>
       <p className="text-white/30 text-xs text-center">
         Al enviar este formulario, acepta nuestra{" "}
