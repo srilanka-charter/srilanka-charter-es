@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 interface ContactFormProps {
   compact?: boolean;
@@ -7,7 +8,7 @@ interface ContactFormProps {
 export default function ContactForm({ compact = false }: ContactFormProps) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-
+  const [, navigate] = useLocation();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -22,6 +23,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     window.location.href =
       "mailto:info@srilanka-charter.com?subject=Consulta de Charter Sri Lanka&body=" +
       encodeURIComponent(body);
+    navigate("/gracias");
   };
 
   const inputClass =
