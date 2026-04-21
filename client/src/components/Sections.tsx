@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const IMAGES = {
   destElla: "/manus-storage/dest_ella_bd8060fc_ee662bd8.jpg",
@@ -16,26 +16,80 @@ const IMAGES = {
 };
 
 // ─── Why SLTCS ────────────────────────────────────────────────
+const WhyIcon = ({ children }: { children: React.ReactNode }) => (
+  <div className="w-12 h-12 rounded-full bg-[#C9A84C]/15 border border-[#C9A84C]/30 flex items-center justify-center mb-5 text-[#C9A84C]">
+    {children}
+  </div>
+);
+
 export function WhySection() {
   const reasons = [
-    { icon: "🛡️", title: "Conductores Certificados por el Gobierno", desc: "Todos nuestros conductores poseen licencias oficiales de Conductor Turístico o Conductor Guía de Sri Lanka. Formados profesionalmente, enfocados en la seguridad y muy valorados por clientes anteriores." },
-    { icon: "💬", title: "Atención en Español", desc: "Desde la primera consulta hasta el último traslado, nuestro equipo hispanohablante está disponible para asistirle. Sin barreras idiomáticas — solo comunicación fluida durante todo su viaje." },
-    { icon: "🚗", title: "Charter Completamente Privado", desc: "A diferencia de los tours en grupo, su vehículo y conductor son exclusivamente suyos. Establezca su propio horario, elija sus paradas y viaje totalmente según sus términos." },
-    { icon: "🗺️", title: "Conocimiento Local Experto", desc: "Nuestros Conductores Guía son apasionados de la historia, cultura y gastronomía de Sri Lanka. Le llevarán más allá de las guías turísticas a lugares ocultos y experiencias auténticas." },
-    { icon: "🚌", title: "El Vehículo Adecuado para Cada Grupo", desc: "Desde parejas hasta grandes grupos familiares de 10 personas, adaptamos el vehículo perfecto a su grupo — garantizando comodidad incluso en los trayectos más largos por la isla." },
-    { icon: "🌍", title: "De Confianza para Viajeros Europeos", desc: "Con más de 1.200 charters completados y una valoración media de satisfacción de 4,9, SLTCS es la opción preferida para visitantes del Reino Unido y Europa que exploran Sri Lanka." },
+    {
+      title: "Conductores Certificados por el Gobierno",
+      desc: "Todos nuestros conductores poseen licencias oficiales de Conductor Turístico o Conductor Guía de Sri Lanka. Formados profesionalmente, enfocados en la seguridad y muy valorados por clientes anteriores.",
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Atención en Español",
+      desc: "Desde la primera consulta hasta el último traslado, nuestro equipo hispanohablante está disponible para asistirle. Sin barreras idiomáticas — solo comunicación fluida durante todo su viaje.",
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+        </svg>
+      ),
+    },
+    {
+      title: "Charter Completamente Privado",
+      desc: "A diferencia de los tours en grupo, su vehículo y conductor son exclusivamente suyos. Establezca su propio horario, elija sus paradas y viaje totalmente según sus términos.",
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+        </svg>
+      ),
+    },
+    {
+      title: "Conocimiento Local Experto",
+      desc: "Nuestros Conductores Guía son apasionados de la historia, cultura y gastronomía de Sri Lanka. Le llevarán más allá de las guías turísticas a lugares ocultos y experiencias auténticas.",
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "El Vehículo Adecuado para Cada Grupo",
+      desc: "Desde parejas hasta grandes grupos familiares de 10 personas, adaptamos el vehículo perfecto a su grupo — garantizando comodidad incluso en los trayectos más largos por la isla.",
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "De Confianza para Viajeros Europeos",
+      desc: "Con más de 1.200 charters completados y una valoración media de satisfacción de 4,9, SLTCS es la opción preferida para visitantes del Reino Unido y Europa que exploran Sri Lanka.",
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+        </svg>
+      ),
+    },
   ];
   return (
     <section className="py-20 bg-[#0e0e0e]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-[#C9A84C] text-xs font-semibold tracking-[0.3em] uppercase mb-4">POR QUÉ SLTCS</p>
         <h2 className="font-['Playfair_Display'] text-3xl sm:text-4xl font-bold text-white mb-12 leading-tight">
-          5 Razones por las que los Viajeros<br />Eligen SLTCS
+          6 Razones por las que los Viajeros<br />Eligen SLTCS
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((r) => (
-            <div key={r.title} className="bg-[#1a1a1a] border border-white/10 rounded-lg p-6 hover:border-[#C9A84C]/40 transition-colors">
-              <div className="text-3xl mb-4">{r.icon}</div>
+            <div key={r.title} className="bg-[#1a1a1a] border border-white/10 rounded-lg p-6 hover:border-[#C9A84C]/40 transition-colors group">
+              <WhyIcon>{r.svg}</WhyIcon>
               <h3 className="font-['Playfair_Display'] text-white font-bold text-lg mb-3">{r.title}</h3>
               <p className="text-white/55 text-sm leading-relaxed">{r.desc}</p>
             </div>

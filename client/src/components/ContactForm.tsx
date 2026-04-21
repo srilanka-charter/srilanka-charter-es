@@ -194,6 +194,9 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
         />
       </div>
 
+      <p className="text-white/50 text-xs text-center border border-white/10 rounded px-3 py-2.5 bg-white/5">
+        ※ Tras recibir su consulta, le responderemos en inglés.
+      </p>
       <button
         type="submit"
         className="w-full bg-[#C9A84C] text-[#0e0e0e] font-bold text-sm tracking-wider uppercase py-3.5 rounded hover:bg-[#b8963e] transition-colors"

@@ -69,12 +69,7 @@ export default function Navbar() {
             <a onClick={() => scrollTo("vehicles")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">VEHÍCULOS</a>
             <a onClick={() => scrollTo("faq")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">FAQ</a>
             <a onClick={() => scrollTo("contact")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">CONTACTO</a>
-            <a
-              onClick={() => scrollTo("contact")}
-              className="bg-[#C9A84C] text-[#0e0e0e] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded hover:bg-[#b8963e] transition-colors cursor-pointer"
-            >
-              💬 Consulta Gratis
-            </a>
+
           </div>
 
           <button className="md:hidden text-white p-2" onClick={() => setMenuOpen(!menuOpen)}>
@@ -104,14 +99,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <div className="px-4 pt-2">
-              <a
-                onClick={() => scrollTo("contact")}
-                className="block bg-[#C9A84C] text-[#0e0e0e] text-xs font-bold tracking-widest uppercase px-4 py-2.5 rounded text-center hover:bg-[#b8963e] transition-colors cursor-pointer"
-              >
-                💬 Consulta Gratis
-              </a>
-            </div>
+
           </div>
         )}
       </div>
