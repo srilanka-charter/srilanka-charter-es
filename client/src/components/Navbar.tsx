@@ -37,7 +37,7 @@ export default function Navbar() {
             href="/"
             className="font-['Playfair_Display'] text-white text-sm font-bold tracking-wide hover:text-[#C9A84C] transition-colors"
           >
-            SLTCS｜Alquiler de coche con conductor privado en Sri Lanka
+            SLTCS｜Alquiler de coche con conductor en Sri Lanka
           </a>
 
           <div className="hidden md:flex items-center gap-7">

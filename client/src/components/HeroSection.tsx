@@ -59,10 +59,10 @@ export default function HeroSection() {
             ALQUILER DE COCHE CON CONDUCTOR
           </div>
           <h1 className="font-['Playfair_Display'] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Sri Lanka{" "}
-            <em className="text-[#C9A84C] not-italic">Alquiler</em>
+            Alquiler de coche{" "}
+            <em className="text-[#C9A84C] not-italic">con conductor</em>
             <br />
-            con Conductor Privado
+            en Sri Lanka
           </h1>
           <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
             Explore Sri Lanka a su propio ritmo con un conductor privado dedicado. Totalmente flexible, totalmente privado — la mejor manera de descubrir la Perla del Océano Índico.
