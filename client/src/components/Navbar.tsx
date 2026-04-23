@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 
 const languages = [
-  { label: "English", url: "https://en.srilanka-charter.com/" },
-  { label: "French", url: "https://fr.srilanka-charter.com/" },
-  { label: "German", url: "https://de.srilanka-charter.com/" },
-  { label: "Dutch", url: "https://nl.srilanka-charter.com/" },
-  { label: "Russian", url: "https://ru.srilanka-charter.com/" },
-  { label: "Japanese", url: "https://sltcs.srilanka-charter.com/" },
+  { label: "Spanish", url: "https://es.srilanka-charter.com/", current: true },
+  { label: "English", url: "https://en.srilanka-charter.com/", current: false },
+  { label: "French", url: "https://fr.srilanka-charter.com/", current: false },
+  { label: "German", url: "https://de.srilanka-charter.com/", current: false },
+  { label: "Dutch", url: "https://nl.srilanka-charter.com/", current: false },
+  { label: "Russian", url: "https://ru.srilanka-charter.com/", current: false },
+  { label: "Japanese", url: "https://sltcs.srilanka-charter.com/", current: false },
 ];
 
 export default function Navbar() {
@@ -114,9 +115,16 @@ export default function Navbar() {
                     <a
                       key={lang.url}
                       href={lang.url}
-                      className="block px-4 py-2.5 text-xs text-white/70 hover:text-[#C9A84C] hover:bg-white/5 transition-colors"
+                      className={`block px-4 py-2.5 text-xs hover:bg-white/5 transition-colors flex items-center justify-between ${
+                        lang.current
+                          ? "text-[#C9A84C] font-semibold"
+                          : "text-white/70 hover:text-[#C9A84C]"
+                      }`}
                     >
                       {lang.label}
+                      {lang.current && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] inline-block" />
+                      )}
                     </a>
                   ))}
                 </div>
@@ -159,9 +167,16 @@ export default function Navbar() {
                 <a
                   key={lang.url}
                   href={lang.url}
-                  className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors"
+                  className={`block px-4 py-3 text-xs font-semibold tracking-widest uppercase transition-colors flex items-center justify-between ${
+                    lang.current
+                      ? "text-[#C9A84C]"
+                      : "text-white/80 hover:text-[#C9A84C]"
+                  }`}
                 >
                   {lang.label}
+                  {lang.current && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] inline-block" />
+                  )}
                 </a>
               ))}
             </div>
