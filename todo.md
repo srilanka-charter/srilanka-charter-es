@@ -1,0 +1,24 @@
+# Project TODO - srilanka-charter-es
+
+- [x] プロジェクト初期化（srilanka-charter-es）
+- [x] 全17枚の画像アップロード（ヒーロー・スライド・目的地・口コミ・車両）
+- [x] メインページ（Home.tsx）作成：ナビゲーション、ヒーロー、WhySection（6 Razones）、懸念事項、プラン、イテラリー、目的地、車両、口コミ、FAQ、お問い合わせフォーム、フッター
+- [x] First View直下にコンタクトフォーム追加
+- [x] 1st viewタイトル「Alquiler de coche con conductor en Sri Lanka」に変更
+- [x] 左上ロゴ「SLTCS｜Alquiler de coche con conductor en Sri Lanka」に変更
+- [x] ヘッダーのCONSULTA GRATISボタン削除
+- [x] フォームボタン上に英語対応注記追加
+- [x] 「6 Razones」修正・SVGアイコン刷新
+- [x] Thanksページ（/gracias）作成・フォーム送信後遷移
+- [x] バックエンド追加（tRPC + Express）・nodemailerでGmail SMTP経由メール送信実装
+- [x] meta descriptionを158文字に修正（SEO対応）
+- [x] Google Analytics（G-VLVRL9HNBK）タグ追加
+- [x] hreflangに7言語追加（es/en/fr/ru/de/nl/ja）・Gitコンフリクト解消
+- [x] 言語切り替えプルダウン追加（CONTACTOの横・地球儀SVGアイコン・Spanishをゴールドハイライト）
+- [x] /priceページ（Pricing.tsx）作成・ナビにPRECIO追加・トップページにFlat-Rate Price Listセクション追加
+- [x] /priceページのSEOメタタグ・JSON-LD追加
+- [x] FAQPage.tsx（/faqページ）作成完了（15問のスペイン語FAQ・アコーディオン・JSON-LD FAQPage schema）
+- [x] App.tsxに/faqルート追加
+- [x] NavbarのFAQリンクをCONTACTOの右に移動・/faqページへのリンクに変更（デスクトップ・モバイル両方）
+- [x] トップページのFAQセクション（FaqSection）を削除
+- [x] Pricing.tsxのuseEffect重複エラー修正（Viteキャッシュクリア・サーバー再起動）

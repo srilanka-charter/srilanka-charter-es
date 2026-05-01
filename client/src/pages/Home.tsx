@@ -11,7 +11,6 @@ import {
   DestinationsSection,
   VehiclesSection,
   ReviewsSection,
-  FaqSection,
   Footer,
 } from "@/components/Sections";
 
@@ -29,7 +28,6 @@ export default function Home() {
       <PricingPreview />
       <VehiclesSection />
       <ReviewsSection />
-      <FaqSection />
       <ContactSection />
       <Footer />
     </div>

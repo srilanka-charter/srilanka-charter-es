@@ -90,9 +90,9 @@ export default function Navbar() {
               )}
             </div>
             <a onClick={() => scrollTo("vehicles")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">VEHÍCULOS</a>
-            <a onClick={() => scrollTo("faq")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">FAQ</a>
             <a href="/price" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">PRECIO</a>
             <a onClick={() => scrollTo("contact")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">CONTACTO</a>
+            <a href="/faq" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">FAQ</a>
 
             {/* Language Switcher */}
             <div className="relative" ref={langRef}>
@@ -148,9 +148,9 @@ export default function Navbar() {
             <a onClick={() => scrollTo("plans")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">PLANES</a>
             <a onClick={() => scrollTo("itineraries")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">ITINERARIO MODELO</a>
             <a onClick={() => scrollTo("vehicles")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">VEHÍCULOS</a>
-            <a onClick={() => scrollTo("faq")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">FAQ</a>
             <a href="/price" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">PRECIO</a>
             <a onClick={() => scrollTo("contact")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">CONTACTO</a>
+            <a href="/faq" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">FAQ</a>
             {/* Mobile Language Switcher */}
             <div className="border-t border-white/10 mt-2 pt-2">
               <p className="px-4 py-2 text-xs font-semibold tracking-widest uppercase text-white/40">OTHER LANGUAGES</p>
