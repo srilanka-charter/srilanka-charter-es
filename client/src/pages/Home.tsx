@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import HeroContactSection from "@/components/HeroContactSection";
 import ContactSection from "@/components/ContactSection";
+import PricingPreview from "@/components/PricingPreview";
 import {
   WhySection,
   ConcernsSection,
@@ -25,6 +26,7 @@ export default function Home() {
       <PlansSection />
       <ItinerariesSection />
       <DestinationsSection />
+      <PricingPreview />
       <VehiclesSection />
       <ReviewsSection />
       <FaqSection />
