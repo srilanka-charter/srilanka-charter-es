@@ -342,7 +342,7 @@ export default function Pricing() {
     }
     const prevDesc = metaDesc.content;
     metaDesc.content =
-      "Consulte los precios de alquiler de coche con conductor privado en Sri Lanka. Planes Bronce, Plata y Oro desde $270. Sedán, Furgoneta y Furgoneta Grande. USD, GBP, EUR, AUD.";
+      "Precios de alquiler de coche con conductor en Sri Lanka. Planes Bronce, Plata y Oro desde $270. Sedán, Furgoneta y Van Grande. Precios en USD, GBP, EUR y AUD.";
 
     const jsonLd = {
       "@context": "https://schema.org",
