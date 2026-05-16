@@ -31,9 +31,9 @@ export default function HeroSection() {
       step++;
       const p = step / steps;
       setStats({
-        trips: Math.round(1200 * p),
+        trips: Math.round(400 * p),
         satisfaction: parseFloat((4.9 * p).toFixed(1)),
-        drivers: Math.round(50 * p),
+        drivers: Math.round(30 * p),
       });
       if (step >= steps) clearInterval(timer);
     }, 2000 / steps);
