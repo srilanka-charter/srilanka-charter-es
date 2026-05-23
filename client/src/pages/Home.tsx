@@ -88,14 +88,14 @@ function DatePicker({ id, name, value, onChange, required }: {
 
 // ─── Image URLs ───────────────────────────────────────────────────────────────
 const IMAGES = {
-  hero1: "/manus-storage/hero_van_srilanka_706f8966.jpg",
-  hero2: "/manus-storage/slide2_sigiriya_b8468f12.jpg",
-  hero3: "/manus-storage/slide3_tea_train_e100395a.jpg",
-  hero4: "/manus-storage/slide4_kandy_19bf406f.jpg",
-  hero5: "/manus-storage/slide5_galle_8aced38c.jpg",
-  destYala: "/manus-storage/dest_yala_0e498c0a_94fadf94.jpg",
-  destElla: "/manus-storage/dest_ella_bd8060fc_ee662bd8.jpg",
-  destNuwara: "/manus-storage/dest_nuwara_57f4e54f_9e62fc9c.jpg",
+  hero1: "/manus-storage/hero_van_srilanka_706f8966_a6da533f.jpg",
+  hero2: "/manus-storage/slide2_sigiriya_b8468f12_41504844.jpg",
+  hero3: "/manus-storage/slide3_tea_train_e100395a_28a9b387.jpg",
+  hero4: "/manus-storage/slide4_kandy_19bf406f_d6088047.jpg",
+  hero5: "/manus-storage/slide5_galle_8aced38c_85f7c897.jpg",
+  destYala: "/manus-storage/dest_yala_0e498c0a_62a5a9e1.jpg",
+  destElla: "/manus-storage/dest_ella_bd8060fc_c1d1a0f6.jpg",
+  destNuwara: "/manus-storage/dest_nuwara_57f4e54f_503282e8.jpg",
 };
 
 const SLIDES = [
@@ -1049,7 +1049,7 @@ function Reviews() {
   const [slide, setSlide] = useState(0);
   const reviews = [
     {
-      photo: "/manus-storage/review1_r_family_eranga_a3545b4c_4c5f320f.png",
+      photo: "/manus-storage/review1_r_family_eranga_a3545b4c_645c08e0.png",
       photoPosition: "center center",
       name: "Familia R",
       pax: "4 pasajeros",
@@ -1059,7 +1059,7 @@ function Reviews() {
       body: "Desde la reserva previa hasta el día del viaje, el equipo respondió con rapidez y claridad. Los precios y la planificación del itinerario se explicaron de manera que no dejaron lugar a dudas. El día del viaje, Eranga condujo con cuidado y compostura, reorientando sin problemas para evitar el tráfico y mantenernos en horario. Su profundo conocimiento de Anuradhapura, Dambulla, Sigiriya y Polonnaruwa nos proporcionó una rica base histórica para comprender este extraordinario país. Nos consideramos afortunados de haberle tenido como conductor y guía.",
     },
     {
-      photo: "/manus-storage/review2_r_family_aruna_3473eef8_b0cf532f.png",
+      photo: "/manus-storage/review2_r_family_aruna_3473eef8_11b2f7c2.png",
       name: "Familia R",
       pax: "4 pasajeros",
       period: "Marzo 2026",
@@ -1068,7 +1068,7 @@ function Reviews() {
       body: "Tener a Aruna con nosotros fue un verdadero golpe de suerte. Su cálida actitud con los niños nos tranquilizó a todos, y su inglés claro significó que nunca se perdió nada en la traducción. Puntual, lleno de sugerencias reflexivas para lugares de interés y restaurantes locales, y consistentemente tranquilo al volante — fue todo lo que podíamos haber pedido. (¡Probablemente saltaremos esa carretera entre Passikudah y Sigiriya la próxima vez!) Le recomendamos sin dudarlo: atento, conocedor y completamente digno de confianza.",
     },
     {
-      photo: "/manus-storage/review_ranjana_new_2b654dea_e4c421b8.png",
+      photo: "/manus-storage/review_ranjana_new_2b654dea_79c6e0c2.png",
       name: "Pareja H",
       pax: "2 pasajeros",
       period: "Noviembre 2025",
@@ -1077,7 +1077,7 @@ function Reviews() {
       body: "Reservamos un charter privado para dos y nos emparejaron con Ranjana — una decisión de la que no podríamos estar más contentos. Aportó una tranquila confianza a cada trayecto, navegando por carreteras de montaña y bulliciosos centros urbanos con igual facilidad. Lo que más destacó fue su genuino entusiasmo: sugirió una experiencia de rafting en aguas bravas que no habíamos planeado, y se convirtió en uno de los momentos culminantes del viaje. Su conocimiento local de miradores ocultos, restaurantes auténticos y costumbres culturales enriqueció cada día.",
     },
     {
-      photo: "/manus-storage/review4_as_priyanth_2aeb5d81_ce374053.png",
+      photo: "/manus-storage/review4_as_priyanth_2aeb5d81_c847c90d.png",
       name: "A&S",
       pax: "2 pasajeros",
       period: "Agosto 2025",
@@ -1086,7 +1086,7 @@ function Reviews() {
       body: "Partiendo desde el Aeropuerto de Colombo, Priyanth nos guió por Sigiriya, Kandy, Nuwara Eliya y Galle durante seis días. Fue puntual y condujo con cuidado en todo momento, siempre comprobando cómo nos sentíamos — algo que realmente apreciamos en los tramos más largos. Su alegre compañía hizo que cada traslado fuera agradable, y sus conocimientos sobre la historia y cultura de Sri Lanka añadieron profundidad real a lo que vimos. También nos llevó a un mirador impresionante que no estaba en nuestro plan original, y nos presentó restaurantes locales que fueron simplemente excepcionales.",
     },
     {
-      photo: "/manus-storage/review5_t_couple_indika_519f1510_a02ac6c2.png",
+      photo: "/manus-storage/review5_t_couple_indika_519f1510_b6cf1cec.png",
       name: "Pareja T",
       pax: "2 pasajeros",
       period: "Octubre 2025",
@@ -1095,7 +1095,7 @@ function Reviews() {
       body: "Viajamos como pareja desde Negombo por Sigiriya, Kandy, Nuwara Eliya y Mirissa durante cinco días. En la primera mañana — que resultó ser un cumpleaños — apareció un pastel en el desayuno, organizado discretamente por Indika a través del hotel. También nos regaló una pequeña figura de elefante. Nos emocionamos genuinamente. Durante todo el viaje fue una presencia estable y tranquilizadora: informándonos antes de cada lugar, manejando los madrugones sin quejarse, recomendando restaurantes que frecuenta personalmente (todos excelentes), e incluso viajando en tren con nosotros para mantenernos seguros entre la multitud.",
     },
     {
-      photo: "/manus-storage/review_dfamily_chamil_9214e24c_34c151c5.png",
+      photo: "/manus-storage/review_dfamily_chamil_9214e24c_e972933a.png",
       name: "Familia D",
       pax: "5 pasajeros",
       period: "Diciembre 2025",
@@ -1198,7 +1198,7 @@ function Vehicles() {
         <div className="vehicles-grid">
           <div className="vehicle-card">
             <div className="vehicle-img-wrap">
-              <img src="/manus-storage/vehicle_sedan_b6b21042_72d56706.png" alt="Sedán" className="vehicle-img" />
+              <img src="/manus-storage/vehicle_sedan_b6b21042_991971a0.png" alt="Sedán" className="vehicle-img" />
             </div>
             <h3>Sedán</h3>
             <div className="vehicle-capacity">Hasta 3 pasajeros</div>
@@ -1206,7 +1206,7 @@ function Vehicles() {
           </div>
           <div className="vehicle-card featured">
             <div className="vehicle-img-wrap">
-              <img src="/manus-storage/vehicle_van_70a807f8_51c22730.png" alt="Furgoneta" className="vehicle-img" />
+              <img src="/manus-storage/vehicle_van_70a807f8_233a386f.png" alt="Furgoneta" className="vehicle-img" />
             </div>
             <h3>Furgoneta</h3>
             <div className="vehicle-capacity">Hasta 6 pasajeros</div>
@@ -1214,7 +1214,7 @@ function Vehicles() {
           </div>
           <div className="vehicle-card">
             <div className="vehicle-img-wrap">
-              <img src="/manus-storage/vehicle_large_van_61632670_d5e131a3.png" alt="Furgoneta Grande" className="vehicle-img" />
+              <img src="/manus-storage/vehicle_large_van_61632670_0b9547da.png" alt="Furgoneta Grande" className="vehicle-img" />
             </div>
             <h3>Furgoneta Grande</h3>
             <div className="vehicle-capacity">Hasta 10 pasajeros</div>
