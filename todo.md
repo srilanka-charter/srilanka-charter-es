@@ -22,3 +22,5 @@
 - [x] NavbarのFAQリンクをCONTACTOの右に移動・/faqページへのリンクに変更（デスクトップ・モバイル両方）
 - [x] トップページのFAQセクション（FaqSection）を削除
 - [x] Pricing.tsxのuseEffect重複エラー修正（Viteキャッシュクリア・サーバー再起動）
+- [x] トップページデザインを英語版GitHubと同じ構造に変更（Home.tsx完全書き換え・index.css英語版CSSシステム適用）
+- [x] ヒーロー統計数値を400+/4.9/30+に変更
