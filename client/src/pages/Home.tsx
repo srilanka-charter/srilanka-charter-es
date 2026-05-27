@@ -121,6 +121,8 @@ function Navbar() {
     { label: "Deutsch", url: "https://de.srilanka-charter.com/" },
     { label: "Nederlands", url: "https://nl.srilanka-charter.com/" },
     { label: "Русский", url: "https://ru.srilanka-charter.com/" },
+    { label: "Bahasa Melayu", url: "https://ms.srilanka-charter.com/" },
+    { label: "Svenska", url: "https://sv.srilanka-charter.com/" },
     { label: "日本語", url: "https://sltcs.srilanka-charter.com/" },
   ];
 
