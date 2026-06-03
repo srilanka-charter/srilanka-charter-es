@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
-const HERO_IMG = "/manus-storage/hero_van_srilanka_706f8966_a6da533f.jpg";
+const HERO_IMG = "/manus-storage/article1_hero_driver_beach_van_18d6666e.webp";
 const VEHICLE_IMG = "/manus-storage/vehicle_van_70a807f8_233a386f.png";
 
 const RELATED = [

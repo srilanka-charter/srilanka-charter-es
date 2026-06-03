@@ -4,7 +4,7 @@ import ArticleNav from "@/components/ArticleNav";
 const articles = [
   {
     href: "/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka",
-    img: "/manus-storage/hero_van_srilanka_706f8966_a6da533f.jpg",
+    img: "/manus-storage/article1_hero_driver_beach_van_18d6666e.webp",
     category: "GUÍA DE CONDUCTOR PRIVADO",
     title: "Conductor Privado en Sri Lanka: Cómo Contratar un Conductor Seguro y Fiable",
     excerpt: "¿Pensando en contratar un conductor privado en Sri Lanka? Esta guía cubre todo — desde qué incluye realmente el servicio, cómo verificar credenciales, comparar costos y reservar con confianza.",
@@ -13,7 +13,7 @@ const articles = [
   },
   {
     href: "/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa",
-    img: "/manus-storage/hero_van_srilanka_706f8966_a6da533f.jpg",
+    img: "/manus-storage/article2_hero_car_hire_passengers_f0671538.webp",
     category: "GUÍA DE CONDUCTOR PRIVADO",
     title: "Alquiler de Coche con Conductor en Sri Lanka: Guía Completa para Primeras Visitas",
     excerpt: "¿Alquilar sin conductor, tomar un taxi o contratar un conductor privado? Esta guía completa compara todas las opciones de transporte en Sri Lanka y explica por qué el charter con conductor es la opción preferida.",
@@ -22,7 +22,7 @@ const articles = [
   },
   {
     href: "/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico",
-    img: "/manus-storage/slide2_sigiriya_b8468f12_41504844.jpg",
+    img: "/manus-storage/article3_hero_chauffeur_sigiriya_781e24c7.webp",
     category: "GUÍA DE CONDUCTOR PRIVADO",
     title: "Chófer Guía en Sri Lanka: Conductor Turístico vs Guía Nacional Explicado",
     excerpt: "¿Confundido por los diferentes tipos de conductores disponibles en Sri Lanka? Esta guía explica la diferencia entre Conductor Turístico, Chófer Guía y Guía Nacional — y te ayuda a elegir el nivel de servicio adecuado.",
