@@ -164,11 +164,8 @@ function Navbar() {
           <li className="nav-dropdown" onMouseEnter={() => setInfoOpen(true)} onMouseLeave={() => setInfoOpen(false)}>
             <button>INFORMACIÓN</button>
             {infoOpen && (
-              <div className="nav-dropdown-menu" style={{ minWidth: "300px" }}>
-                <div style={{ padding: "6px 16px 4px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Guía de Conductor Privado</div>
-                <a href="/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka">Cómo Contratar un Conductor Privado</a>
-                <a href="/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa">Alquiler de Coche con Conductor: Guía Completa</a>
-                <a href="/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico">Chófer Guía: Conductor vs Guía Turístico</a>
+              <div className="nav-dropdown-menu" style={{ minWidth: "260px" }}>
+                <a href="/information/guia-conductor-privado" style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}>Guía de Conductor Privado →</a>
               </div>
             )}
           </li>
@@ -230,9 +227,7 @@ function Navbar() {
             </button>
             {mobileInfoOpen && (
               <div className="mobile-accordion-body">
-                <a href="/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka">Cómo Contratar un Conductor Privado</a>
-                <a href="/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa">Alquiler de Coche con Conductor: Guía Completa</a>
-                <a href="/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico">Chófer Guía: Conductor vs Guía Turístico</a>
+                <a href="/information/guia-conductor-privado">Guía de Conductor Privado</a>
               </div>
             )}
           </div>

@@ -11,6 +11,7 @@ import FAQPage from "./pages/FAQPage";
 import PrivateDriverHowToHire from "./pages/info/PrivateDriverHowToHire";
 import CarHireWithDriverGuide from "./pages/info/CarHireWithDriverGuide";
 import ChauffeurGuideDriverVsGuide from "./pages/info/ChauffeurGuideDriverVsGuide";
+import PrivateDriverGuideCategory from "./pages/info/PrivateDriverGuideCategory";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -20,6 +21,8 @@ function Router() {
       <Route path={"/gracias"} component={Thanks} />
       <Route path={"/price"} component={Pricing} />
       <Route path={"/faq"} component={FAQPage} />
+      {/* Information category pages */}
+      <Route path={"/information/guia-conductor-privado"} component={PrivateDriverGuideCategory} />
       {/* Information articles - Private Driver Guide */}
       <Route path={"/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka"} component={PrivateDriverHowToHire} />
       <Route path={"/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa"} component={CarHireWithDriverGuide} />

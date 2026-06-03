@@ -47,17 +47,8 @@ export default function ArticleNav() {
           >
             <button>INFORMACIÓN</button>
             {infoOpen && (
-              <div className="nav-dropdown-menu" style={{ minWidth: "300px" }}>
-                {INFO_LINKS.map((cat) => (
-                  <div key={cat.category}>
-                    <div style={{ padding: "6px 16px 4px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                      {cat.category}
-                    </div>
-                    {cat.items.map((item) => (
-                      <a key={item.href} href={item.href}>{item.label}</a>
-                    ))}
-                  </div>
-                ))}
+              <div className="nav-dropdown-menu" style={{ minWidth: "260px" }}>
+                <a href="/information/guia-conductor-privado" style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}>Guía de Conductor Privado →</a>
               </div>
             )}
           </li>
@@ -107,11 +98,7 @@ export default function ArticleNav() {
             </button>
             {mobileInfoOpen && (
               <div className="mobile-accordion-body">
-                {INFO_LINKS.flatMap((cat) =>
-                  cat.items.map((item) => (
-                    <a key={item.href} href={item.href}>{item.label}</a>
-                  ))
-                )}
+                <a href="/information/guia-conductor-privado">Guía de Conductor Privado</a>
               </div>
             )}
           </div>
