@@ -24,3 +24,9 @@
 - [x] Pricing.tsxのuseEffect重複エラー修正（Viteキャッシュクリア・サーバー再起動）
 - [x] トップページデザインを英語版GitHubと同じ構造に変更（Home.tsx完全書き換え・index.css英語版CSSシステム適用）
 - [x] ヒーロー統計数値を400+/4.9/30+に変更
+- [x] ヘッダーにINFORMACIÓNプルダウンを追加（PRECIO→INFORMACIÓN→CONTACTO→FAQの順）
+- [x] ArticleNavコンポーネント作成（記事ページ共通ナビゲーション）
+- [x] 記事1: /information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka（6/4公開）
+- [x] 記事2: /information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa（6/4公開）
+- [x] 記事3: /information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico（6/4公開）
+- [x] 全3記事にhreflang（es/en/x-default）とcanonical設定

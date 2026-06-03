@@ -112,8 +112,10 @@ function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [infoOpen, setInfoOpen] = useState(false);
   const [mobileItineraryOpen, setMobileItineraryOpen] = useState(false);
   const [mobileLangOpen, setMobileLangOpen] = useState(false);
+  const [mobileInfoOpen, setMobileInfoOpen] = useState(false);
 
   const LANGUAGES = [
     { label: "English", url: "https://en.srilanka-charter.com/" },
@@ -159,6 +161,17 @@ function Navbar() {
             )}
           </li>
           <li><a href="/price">PRECIO</a></li>
+          <li className="nav-dropdown" onMouseEnter={() => setInfoOpen(true)} onMouseLeave={() => setInfoOpen(false)}>
+            <button>INFORMACIÓN</button>
+            {infoOpen && (
+              <div className="nav-dropdown-menu" style={{ minWidth: "300px" }}>
+                <div style={{ padding: "6px 16px 4px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Guía de Conductor Privado</div>
+                <a href="/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka">Cómo Contratar un Conductor Privado</a>
+                <a href="/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa">Alquiler de Coche con Conductor: Guía Completa</a>
+                <a href="/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico">Chófer Guía: Conductor vs Guía Turístico</a>
+              </div>
+            )}
+          </li>
           <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}>CONTACTO</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li className="nav-dropdown nav-lang-dropdown" onMouseEnter={() => setLangOpen(true)} onMouseLeave={() => setLangOpen(false)}>
@@ -204,6 +217,25 @@ function Navbar() {
             )}
           </div>
           <a href="/price">Precio</a>
+          <div className="mobile-accordion">
+            <button
+              className="mobile-accordion-btn"
+              onClick={() => setMobileInfoOpen(o => !o)}
+            >
+              <span>Información</span>
+              <svg
+                width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                style={{ transform: mobileInfoOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}
+              ><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            {mobileInfoOpen && (
+              <div className="mobile-accordion-body">
+                <a href="/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka">Cómo Contratar un Conductor Privado</a>
+                <a href="/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa">Alquiler de Coche con Conductor: Guía Completa</a>
+                <a href="/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico">Chófer Guía: Conductor vs Guía Turístico</a>
+              </div>
+            )}
+          </div>
           <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}>Contacto</a>
           <a href="/faq">FAQ</a>
           <div className="mobile-accordion">

@@ -14,8 +14,15 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [itineraryOpen, setItineraryOpen] = useState(false);
+  const [infoOpen, setInfoOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+
+  const infoItems = [
+    { label: "Cómo Contratar un Conductor Privado", href: "/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka" },
+    { label: "Alquiler de Coche con Conductor: Guía Completa", href: "/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa" },
+    { label: "Chófer Guía: Conductor vs Guía Turístico", href: "/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico" },
+  ];
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
@@ -91,6 +98,33 @@ export default function Navbar() {
             </div>
             <a onClick={() => scrollTo("vehicles")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">VEHÍCULOS</a>
             <a href="/price" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">PRECIO</a>
+            {/* INFORMACIÓN dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setInfoOpen(true)}
+              onMouseLeave={() => setInfoOpen(false)}
+            >
+              <button className="flex items-center gap-1 text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors">
+                INFORMACIÓN
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {infoOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-[#1a1a1a] border border-white/10 rounded shadow-xl z-50">
+                  <div className="px-4 pt-2 pb-1 text-[0.65rem] text-[#C9A84C] font-bold tracking-widest uppercase">GUÍA DE CONDUCTOR PRIVADO</div>
+                  {infoItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-xs text-white/70 hover:text-[#C9A84C] hover:bg-white/5 transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
             <a onClick={() => scrollTo("contact")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">CONTACTO</a>
             <a href="/faq" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">FAQ</a>
 
@@ -149,6 +183,19 @@ export default function Navbar() {
             <a onClick={() => scrollTo("itineraries")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">ITINERARIO MODELO</a>
             <a onClick={() => scrollTo("vehicles")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">VEHÍCULOS</a>
             <a href="/price" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">PRECIO</a>
+            {/* INFORMACIÓN mobile */}
+            <div className="border-t border-white/5">
+              <p className="px-4 py-2 text-xs font-semibold tracking-widest uppercase text-[#C9A84C]/80">INFORMACIÓN</p>
+              {infoItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="block px-6 py-2.5 text-xs text-white/70 hover:text-[#C9A84C] transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
             <a onClick={() => scrollTo("contact")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">CONTACTO</a>
             <a href="/faq" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">FAQ</a>
             {/* Mobile Language Switcher */}
