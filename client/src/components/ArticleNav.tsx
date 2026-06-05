@@ -11,15 +11,11 @@ const LANGUAGES = [
   { label: "日本語", url: "https://sltcs.srilanka-charter.com/" },
 ];
 
-const INFO_LINKS = [
-  {
-    category: "Guía de Conductor Privado",
-    items: [
-      { label: "Cómo Contratar un Conductor Privado", href: "/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka" },
-      { label: "Alquiler de Coche con Conductor: Guía Completa", href: "/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa" },
-      { label: "Chófer Guía: Conductor vs Guía Turístico", href: "/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico" },
-    ],
-  },
+const INFO_CATEGORIES = [
+  { label: "Guía de Conductor Privado", href: "/information/guia-conductor-privado" },
+  { label: "Guía de Costes y Reserva", href: "/information/guia-costes-reserva" },
+  { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
+  { label: "Itinerarios", href: "/information/itinerarios" },
 ];
 
 export default function ArticleNav() {
@@ -48,7 +44,15 @@ export default function ArticleNav() {
             <button>INFORMACIÓN</button>
             {infoOpen && (
               <div className="nav-dropdown-menu" style={{ minWidth: "260px" }}>
-                <a href="/information/guia-conductor-privado" style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}>Guía de Conductor Privado →</a>
+                {INFO_CATEGORIES.map((cat) => (
+                  <a
+                    key={cat.href}
+                    href={cat.href}
+                    style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}
+                  >
+                    {cat.label} →
+                  </a>
+                ))}
               </div>
             )}
           </li>
@@ -98,7 +102,9 @@ export default function ArticleNav() {
             </button>
             {mobileInfoOpen && (
               <div className="mobile-accordion-body">
-                <a href="/information/guia-conductor-privado">Guía de Conductor Privado</a>
+                {INFO_CATEGORIES.map((cat) => (
+                  <a key={cat.href} href={cat.href}>{cat.label}</a>
+                ))}
               </div>
             )}
           </div>

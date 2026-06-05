@@ -18,10 +18,11 @@ export default function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
 
-  const infoItems = [
-    { label: "Cómo Contratar un Conductor Privado", href: "/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka" },
-    { label: "Alquiler de Coche con Conductor: Guía Completa", href: "/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa" },
-    { label: "Chófer Guía: Conductor vs Guía Turístico", href: "/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico" },
+  const infoCategories = [
+    { label: "Guía de Conductor Privado", href: "/information/guia-conductor-privado" },
+    { label: "Guía de Costes y Reserva", href: "/information/guia-costes-reserva" },
+    { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
+    { label: "Itinerarios", href: "/information/itinerarios" },
   ];
 
   useEffect(() => {
@@ -112,12 +113,15 @@ export default function Navbar() {
               </button>
               {infoOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-[#1a1a1a] border border-white/10 rounded shadow-xl z-50">
-                  <a
-                    href="/information/guia-conductor-privado"
-                    className="block px-4 py-2.5 text-[0.65rem] text-[#C9A84C] font-bold tracking-widest uppercase hover:bg-white/5 transition-colors"
-                  >
-                    Guía de Conductor Privado →
-                  </a>
+                  {infoCategories.map((cat) => (
+                    <a
+                      key={cat.href}
+                      href={cat.href}
+                      className="block px-4 py-2.5 text-[0.65rem] text-[#C9A84C] font-bold tracking-widest uppercase hover:bg-white/5 transition-colors"
+                    >
+                      {cat.label} →
+                    </a>
+                  ))}
                 </div>
               )}
             </div>
@@ -181,12 +185,16 @@ export default function Navbar() {
             <a href="/price" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">PRECIO</a>
             {/* INFORMACIÓN mobile */}
             <div className="border-t border-white/5">
-              <a
-                href="/information/guia-conductor-privado"
-                className="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-[#C9A84C]/80 hover:text-[#C9A84C] transition-colors"
-              >
-                INFORMACIÓN →
-              </a>
+              <p className="px-4 py-2 text-xs font-semibold tracking-widest uppercase text-white/40">INFORMACIÓN</p>
+              {infoCategories.map((cat) => (
+                <a
+                  key={cat.href}
+                  href={cat.href}
+                  className="block px-4 py-2 text-xs font-semibold tracking-widest uppercase text-[#C9A84C]/80 hover:text-[#C9A84C] transition-colors"
+                >
+                  {cat.label}
+                </a>
+              ))}
             </div>
             <a onClick={() => scrollTo("contact")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">CONTACTO</a>
             <a href="/faq" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">FAQ</a>

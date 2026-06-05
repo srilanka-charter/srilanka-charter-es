@@ -12,6 +12,12 @@ import PrivateDriverHowToHire from "./pages/info/PrivateDriverHowToHire";
 import CarHireWithDriverGuide from "./pages/info/CarHireWithDriverGuide";
 import ChauffeurGuideDriverVsGuide from "./pages/info/ChauffeurGuideDriverVsGuide";
 import PrivateDriverGuideCategory from "./pages/info/PrivateDriverGuideCategory";
+import CostBookingGuideCategory from "./pages/info/CostBookingGuideCategory";
+import FamilyGroupTravelCategory from "./pages/info/FamilyGroupTravelCategory";
+import ItinerariosCategory from "./pages/info/ItinerariosCategory";
+import DriverHireCostsChecklist from "./pages/info/DriverHireCostsChecklist";
+import VanHireFamiliesGroups from "./pages/info/VanHireFamiliesGroups";
+import Itinerary4N5D from "./pages/info/Itinerary4N5D";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -23,10 +29,19 @@ function Router() {
       <Route path={"/faq"} component={FAQPage} />
       {/* Information category pages */}
       <Route path={"/information/guia-conductor-privado"} component={PrivateDriverGuideCategory} />
+      <Route path={"/information/guia-costes-reserva"} component={CostBookingGuideCategory} />
+      <Route path={"/information/viajes-familia-grupos"} component={FamilyGroupTravelCategory} />
+      <Route path={"/information/itinerarios"} component={ItinerariosCategory} />
       {/* Information articles - Private Driver Guide */}
       <Route path={"/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka"} component={PrivateDriverHowToHire} />
       <Route path={"/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa"} component={CarHireWithDriverGuide} />
       <Route path={"/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico"} component={ChauffeurGuideDriverVsGuide} />
+      {/* Information articles - Cost & Booking Guide */}
+      <Route path={"/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist"} component={DriverHireCostsChecklist} />
+      {/* Information articles - Family & Group Travel */}
+      <Route path={"/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos"} component={VanHireFamiliesGroups} />
+      {/* Information articles - Itinerarios */}
+      <Route path={"/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias"} component={Itinerary4N5D} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

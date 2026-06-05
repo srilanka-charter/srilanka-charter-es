@@ -165,7 +165,14 @@ function Navbar() {
             <button>INFORMACIÓN</button>
             {infoOpen && (
               <div className="nav-dropdown-menu" style={{ minWidth: "260px" }}>
-                <a href="/information/guia-conductor-privado" style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}>Guía de Conductor Privado →</a>
+                {[
+                  { label: "Guía de Conductor Privado", href: "/information/guia-conductor-privado" },
+                  { label: "Guía de Costes y Reserva", href: "/information/guia-costes-reserva" },
+                  { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
+                  { label: "Itinerarios", href: "/information/itinerarios" },
+                ].map((cat) => (
+                  <a key={cat.href} href={cat.href} style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}>{cat.label} →</a>
+                ))}
               </div>
             )}
           </li>
@@ -228,6 +235,9 @@ function Navbar() {
             {mobileInfoOpen && (
               <div className="mobile-accordion-body">
                 <a href="/information/guia-conductor-privado">Guía de Conductor Privado</a>
+                <a href="/information/guia-costes-reserva">Guía de Costes y Reserva</a>
+                <a href="/information/viajes-familia-grupos">Viajes en Familia y Grupos</a>
+                <a href="/information/itinerarios">Itinerarios</a>
               </div>
             )}
           </div>

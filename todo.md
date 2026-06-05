@@ -30,3 +30,11 @@
 - [x] 記事2: /information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa（6/4公開）
 - [x] 記事3: /information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico（6/4公開）
 - [x] 全3記事にhreflang（es/en/x-default）とcanonical設定
+- [x] インフォグラフィック「Lo Que Cubre Tu Tarifa Diaria」スペイン語版生成
+- [x] 記事4: /information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist（6/5公開）
+- [x] 記事5: /information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos（6/5公開）
+- [x] 記事6: /information/itinerarios/itinerario-sri-lanka-4-noches-5-dias（6/5公開）
+- [x] カテゴリーページ: /information/guia-costes-reserva
+- [x] カテゴリーページ: /information/viajes-familia-grupos
+- [x] カテゴリーページ: /information/itinerarios
+- [x] INFORMACIÓNプルダウンに3カテゴリーを追加（Home.tsx・ArticleNav.tsx・Navbar.tsx）
