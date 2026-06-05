@@ -277,6 +277,10 @@ export default function DriverHireCostsChecklist() {
             <p className="article-table-note">
               Todos los precios incluyen impuestos y se aplican a itinerarios estándar con conductores de habla inglesa. Las cotizaciones también están disponibles en GBP, EUR y AUD.
             </p>
+            <div className="article-price-table-cta">
+              <p>¿Quieres un presupuesto exacto para tu itinerario?</p>
+              <Link href="/#contact" className="article-price-cta-btn">SOLICITAR PRESUPUESTO GRATUITO →</Link>
+            </div>
           </div>
 
           <h3>Entendiendo los Tres Planes</h3>

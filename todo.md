@@ -38,3 +38,8 @@
 - [x] カテゴリーページ: /information/viajes-familia-grupos
 - [x] カテゴリーページ: /information/itinerarios
 - [x] INFORMACIÓNプルダウンに3カテゴリーを追加（Home.tsx・ArticleNav.tsx・Navbar.tsx）
+- [x] 記事4: カテゴリーページにアイキャッチ付きカード表示・表デザイン改善・価格表に問い合わせリンク追加
+- [x] 記事5: 英語版スペイン語訳版として全面リライト（写真・表デザイン改善・価格表に問い合わせリンク追加）
+- [x] 記事6: 英語版スペイン語訳版として写真追加・表デザイン改善・価格表に問い合わせリンク追加
+- [x] INFORMACIÓNプルダウンからITINERARIOSを削除（Home.tsx・ArticleNav.tsx・Navbar.tsx）
+- [x] ヘッダーのITINERARIOSドロップダウンに記事6（4 Noches/5 Días）リンクを追加

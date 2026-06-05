@@ -1711,3 +1711,310 @@ footer {
   text-align: center;
 }
 .article-sidebar-cta p { font-size: 0.85rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 1rem; }
+
+/* =============================================
+   ARTICLE 4 / 5 / 6 — Enhanced Styles
+   ============================================= */
+
+/* Price Table */
+.article-price-table-wrapper { overflow-x: auto; margin: 1.5rem 0 0.5rem; border-radius: 10px; border: 1px solid rgba(201,168,76,0.25); }
+.article-price-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; min-width: 380px; }
+.article-price-table caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  padding: 0.75rem 1rem;
+  background: rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+.article-price-table thead tr { background: rgba(201,168,76,0.12); }
+.article-price-table th {
+  padding: 0.75rem 1rem;
+  color: #c9a84c;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  white-space: nowrap;
+}
+.article-price-table th:first-child { text-align: left; }
+.article-price-table td {
+  padding: 0.7rem 1rem;
+  color: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  font-size: 0.9rem;
+}
+.article-price-table td:first-child { text-align: left; font-weight: 600; color: #fff; }
+.article-price-table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+.article-price-table tbody tr:hover td { background: rgba(201,168,76,0.06); }
+.article-price-table tbody tr:last-child td { border-bottom: none; }
+.badge-popular {
+  display: inline-block;
+  background: #c9a84c;
+  color: #1a1a1a;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.article-table-note { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem; padding: 0 0.25rem; }
+
+/* Plans Grid */
+.article-plans-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.25rem 0 2rem; }
+.article-plan-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.article-plan-card--popular { border-color: rgba(201,168,76,0.5); background: rgba(201,168,76,0.06); }
+.article-plan-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.5rem;
+}
+.article-plan-badge--popular { color: #c9a84c; }
+.article-plan-card h4 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
+.article-plan-driver { font-size: 0.75rem; color: #c9a84c; margin-bottom: 0.75rem; }
+.article-plan-card ul { list-style: none; padding: 0; margin: 0 0 0.75rem; }
+.article-plan-card ul li { font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.7; }
+.article-plan-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+/* Warning List */
+.article-warning-list { display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0 1.5rem; }
+.article-warning-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: rgba(255,80,80,0.06);
+  border: 1px solid rgba(255,80,80,0.15);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+.article-warning-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+.article-warning-item strong { display: block; color: #fff; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.article-warning-item p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; }
+
+/* Steps */
+.article-steps { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.25rem 0 1.5rem; }
+.article-step { display: flex; align-items: flex-start; gap: 1rem; }
+.article-step span {
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; min-width: 28px;
+  background: #c9a84c; color: #1a1a1a;
+  font-weight: 800; font-size: 0.85rem;
+  border-radius: 50%; flex-shrink: 0;
+}
+.article-step p { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.6; margin: 0; padding-top: 3px; }
+
+/* Figure / Infographic */
+.article-figure { margin: 1.5rem 0; text-align: center; }
+.article-infographic { max-width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
+.article-figure figcaption { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 0.5rem; font-style: italic; }
+
+/* TOC Toggle */
+.article-toc-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #c9a84c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article-toc-list { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.article-toc-list li { padding: 0.25rem 0; }
+.article-toc-list li a { font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s; }
+.article-toc-list li a:hover { color: #c9a84c; }
+
+/* Section Caption */
+.article-section-caption { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-style: italic; margin-bottom: 1rem; }
+
+/* Category Hero */
+.category-hero {
+  position: relative;
+  height: 260px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a1a 100%);
+  display: flex;
+  align-items: flex-end;
+}
+.category-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+}
+.category-hero-content {
+  position: relative; z-index: 1;
+  max-width: 900px; margin: 0 auto; width: 100%;
+  padding: 0 24px 32px;
+}
+.category-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.category-hero-content p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 560px; }
+
+/* Category Articles Grid */
+.category-articles-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 24px 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+.category-article-card {
+  display: block;
+  background: #161616;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.category-article-card:hover {
+  border-color: rgba(201,168,76,0.6);
+  transform: translateY(-2px);
+}
+.category-article-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+.category-article-body { padding: 20px; }
+.category-article-date { font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+.category-article-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 8px 0 10px;
+}
+.category-article-desc {
+  font-size: 0.82rem;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.category-article-read { font-size: 0.8rem; color: #c9a84c; font-weight: 600; }
+
+/* Article Photo */
+.article-photo { width: 100%; border-radius: 8px; margin: 1.25rem 0 0.5rem; object-fit: cover; max-height: 420px; }
+.article-photo-caption { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-style: italic; margin-bottom: 1.25rem; text-align: center; }
+
+/* Day Card (Itinerary) */
+.article-day-card {
+  border-left: 3px solid #c9a84c;
+  background: rgba(255,255,255,0.03);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.article-day-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 0.25rem;
+}
+
+/* Included Table */
+.article-included-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.article-included-table th {
+  background: rgba(201,168,76,0.12);
+  color: #c9a84c;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+.article-included-table td {
+  padding: 0.65rem 1rem;
+  color: rgba(255,255,255,0.82);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.875rem;
+}
+.article-included-table tr:last-child td { border-bottom: none; }
+.article-included-yes { color: #6fcf97; font-weight: 700; }
+.article-included-no { color: rgba(255,255,255,0.45); }
+
+/* Jeep Safari Box */
+.article-callout-box {
+  background: rgba(201,168,76,0.07);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.article-callout-box p { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.75; margin-bottom: 0.75rem; }
+.article-callout-box p:last-child { margin-bottom: 0; }
+.article-callout-title { font-size: 0.85rem; font-weight: 700; color: #c9a84c; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+
+/* ── Article Price Table CTA ── */
+.article-price-table-cta {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.article-price-table-cta p {
+  margin: 0;
+  color: #d4af37;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.article-price-cta-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: #d4af37;
+  color: #0a0a0a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.article-price-cta-btn:hover {
+  background: #e8c84a;
+}

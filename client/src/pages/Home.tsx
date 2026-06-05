@@ -152,11 +152,11 @@ function Navbar() {
             <button>ITINERARIOS</button>
             {dropdownOpen && (
               <div className="nav-dropdown-menu">
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>4 Noches / 5 Días</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>5 Noches / 6 Días</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>6 Noches / 7 Días</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>5–7 Días – Triángulo Cultural</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>10 Días – 2 Semanas</a>
+                <a href="/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias">4 Noches / 5 Días</a>
+                <span style={{ display: "block", padding: "8px 12px", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)" }}>5 Noches / 6 Días <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <span style={{ display: "block", padding: "8px 12px", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)" }}>6 Noches / 7 Días <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <span style={{ display: "block", padding: "8px 12px", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)" }}>5–7 Días – Triángulo Cultural <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <span style={{ display: "block", padding: "8px 12px", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)" }}>10 Días – 2 Semanas <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
               </div>
             )}
           </li>
@@ -169,7 +169,6 @@ function Navbar() {
                   { label: "Guía de Conductor Privado", href: "/information/guia-conductor-privado" },
                   { label: "Guía de Costes y Reserva", href: "/information/guia-costes-reserva" },
                   { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
-                  { label: "Itinerarios", href: "/information/itinerarios" },
                 ].map((cat) => (
                   <a key={cat.href} href={cat.href} style={{ padding: "10px 16px", fontSize: "0.7rem", color: "#c9a84c", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "block" }}>{cat.label} →</a>
                 ))}
@@ -212,11 +211,11 @@ function Navbar() {
             </button>
             {mobileItineraryOpen && (
               <div className="mobile-accordion-body">
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>4 Noches / 5 Días</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>5 Noches / 6 Días</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>6 Noches / 7 Días</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>5–7 Días – Triángulo Cultural</a>
-                <a href="#courses" onClick={(e) => { e.preventDefault(); scrollTo("courses"); }}>10 Días – 2 Semanas</a>
+                <a href="/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias">4 Noches / 5 Días</a>
+                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>5 Noches / 6 Días <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>6 Noches / 7 Días <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>5–7 Días – Triángulo Cultural <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>10 Días – 2 Semanas <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
               </div>
             )}
           </div>
@@ -237,7 +236,6 @@ function Navbar() {
                 <a href="/information/guia-conductor-privado">Guía de Conductor Privado</a>
                 <a href="/information/guia-costes-reserva">Guía de Costes y Reserva</a>
                 <a href="/information/viajes-familia-grupos">Viajes en Familia y Grupos</a>
-                <a href="/information/itinerarios">Itinerarios</a>
               </div>
             )}
           </div>

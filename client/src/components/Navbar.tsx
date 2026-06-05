@@ -22,7 +22,6 @@ export default function Navbar() {
     { label: "Guía de Conductor Privado", href: "/information/guia-conductor-privado" },
     { label: "Guía de Costes y Reserva", href: "/information/guia-costes-reserva" },
     { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
-    { label: "Itinerarios", href: "/information/itinerarios" },
   ];
 
   useEffect(() => {
@@ -48,12 +47,12 @@ export default function Navbar() {
     setLangOpen(false);
   };
 
-  const itineraryItems = [
-    "4 Noches / 5 Días",
-    "5 Noches / 6 Días",
-    "6 Noches / 7 Días",
-    "5–7 Días Cultural",
-    "10 Días – 2 Semanas",
+  const itineraryLinks = [
+    { label: "4 Noches / 5 Días", href: "/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias" },
+    { label: "5 Noches / 6 Días", href: null },
+    { label: "6 Noches / 7 Días", href: null },
+    { label: "5–7 Días Cultural", href: null },
+    { label: "10 Días – 2 Semanas", href: null },
   ];
 
   return (
@@ -85,14 +84,21 @@ export default function Navbar() {
               </button>
               {itineraryOpen && (
                 <div className="absolute top-full right-0 mt-2 w-52 bg-[#1a1a1a] border border-white/10 rounded shadow-xl z-50">
-                  {itineraryItems.map((label) => (
-                    <a
-                      key={label}
-                      onClick={() => { scrollTo("itineraries"); setItineraryOpen(false); }}
-                      className="block px-4 py-2.5 text-xs text-white/70 hover:text-[#C9A84C] hover:bg-white/5 transition-colors cursor-pointer"
-                    >
-                      {label}
-                    </a>
+                  {itineraryLinks.map((item) => (
+                    item.href
+                      ? <a
+                          key={item.label}
+                          href={item.href}
+                          className="block px-4 py-2.5 text-xs text-white/70 hover:text-[#C9A84C] hover:bg-white/5 transition-colors cursor-pointer"
+                        >
+                          {item.label}
+                        </a>
+                      : <span
+                          key={item.label}
+                          className="block px-4 py-2.5 text-xs text-white/30 cursor-default"
+                        >
+                          {item.label} <span style={{ fontSize: "0.6rem", color: "rgba(201,168,76,0.5)" }}>Próximamente</span>
+                        </span>
                   ))}
                 </div>
               )}

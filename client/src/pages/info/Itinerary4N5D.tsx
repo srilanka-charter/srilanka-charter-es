@@ -3,6 +3,11 @@ import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
 const HERO_IMG = "/manus-storage/article6_hero_sigiriya_aerial_acc21167.webp";
+const SIGIRIYA_OVERVIEW = "/manus-storage/article6_sigiriya_overview_4a782e2a.webp";
+const SIGIRIYA_TOP = "/manus-storage/article6_sigiriya_top_tourists_f75c454c.webp";
+const SIGIRIYA_COUPLE = "/manus-storage/article6_sigiriya_couple_driver_fd86abc8.webp";
+const JEEP_SAFARI = "/manus-storage/article6_jeep_safari_tourists_1e171723.webp";
+const GALLE_FORT = "/manus-storage/article6_galle_fort_c1533b3a.webp";
 
 const TOC = [
   { id: "descripcion-general", label: "Descripción General del Itinerario" },
@@ -56,7 +61,7 @@ export default function Itinerary4N5D() {
           <div className="article-hero-meta">
             <span>5 junio 2026</span>
             <span className="article-hero-dot">·</span>
-            <span>7 min de lectura</span>
+            <span>8 min de lectura</span>
           </div>
         </div>
       </div>
@@ -64,10 +69,6 @@ export default function Itinerary4N5D() {
       {/* Breadcrumb */}
       <div className="article-breadcrumb">
         <Link href="/">Inicio</Link>
-        <span>›</span>
-        <Link href="/information">Información</Link>
-        <span>›</span>
-        <Link href="/information/itinerarios">Itinerarios</Link>
         <span>›</span>
         <span>Itinerario Sri Lanka 4 Noches / 5 Días</span>
       </div>
@@ -106,11 +107,22 @@ export default function Itinerary4N5D() {
 
           <h2 id="descripcion-general">Descripción General del Itinerario</h2>
 
+          {/* Overview photo */}
+          <figure className="article-figure">
+            <img
+              src={SIGIRIYA_OVERVIEW}
+              alt="Vista panorámica de la Roca de Sigiriya, Sri Lanka"
+              className="article-photo"
+              style={{ maxHeight: "400px" }}
+            />
+            <figcaption>La Roca de Sigiriya — uno de los yacimientos arqueológicos más extraordinarios de Asia y punto central de este itinerario</figcaption>
+          </figure>
+
           <div className="article-price-table-wrapper">
             <table className="article-price-table">
               <caption>Resumen del itinerario de 4 noches / 5 días</caption>
               <thead>
-                <tr><th>Detalle</th><th>Información</th></tr>
+                <tr><th style={{ textAlign: "left" }}>Detalle</th><th style={{ textAlign: "left" }}>Información</th></tr>
               </thead>
               <tbody>
                 {[
@@ -121,7 +133,10 @@ export default function Itinerary4N5D() {
                   ["Punto de Inicio / Fin", "Aeropuerto de Colombo (BIA)"],
                   ["Plan Recomendado", "Silver o Gold"],
                 ].map(([det, info]) => (
-                  <tr key={det}><td><strong>{det}</strong></td><td>{info}</td></tr>
+                  <tr key={det}>
+                    <td style={{ textAlign: "left" }}><strong>{det}</strong></td>
+                    <td style={{ textAlign: "left" }}>{info}</td>
+                  </tr>
                 ))}
               </tbody>
             </table>
@@ -136,7 +151,11 @@ export default function Itinerary4N5D() {
           </p>
 
           <p>
-            Conduce hacia el norte hasta la zona de Sigiriya (aproximadamente 3–4 horas), haciendo una parada en el <strong>Templo de la Cueva de Dambulla</strong> — un Patrimonio Mundial de la UNESCO con cinco grutas que albergan más de 150 estatuas de Buda y murales antiguos. Regístrate en tu hotel en la zona de Sigiriya o Kandalama.
+            Conduce hacia el norte hasta la zona de Sigiriya (aproximadamente 3–4 horas), haciendo una parada en el <strong>Templo de la Cueva de Dambulla</strong> — un Patrimonio Mundial de la UNESCO con cinco grutas que albergan más de 150 estatuas de Buda y murales antiguos.
+          </p>
+
+          <p>
+            Regístrate en tu hotel en la zona de Sigiriya o Kandalama.
           </p>
 
           <h3 id="dia-2">Día 2 — Fortaleza de la Roca de Sigiriya</h3>
@@ -149,12 +168,34 @@ export default function Itinerary4N5D() {
             Reserva 2,5–3 horas para la subida y bajada completas.
           </p>
 
+          {/* Sigiriya top photo */}
+          <figure className="article-figure">
+            <img
+              src={SIGIRIYA_TOP}
+              alt="Turistas en la cima de la Roca de Sigiriya con vistas panorámicas"
+              className="article-photo"
+              style={{ maxHeight: "380px" }}
+            />
+            <figcaption>La cima de Sigiriya ofrece vistas panorámicas sobre las llanuras de la provincia central norte</figcaption>
+          </figure>
+
           <p>
-            Por la tarde, disfruta de un safari opcional en jeep en el <strong>Parque Nacional de Minneriya</strong>, famoso por sus concentraciones estacionales de elefantes — una de las más grandes del mundo. Regresa a tu hotel por la noche.
+            Por la tarde, disfruta de un safari opcional en jeep en el <strong>Parque Nacional de Minneriya</strong>, famoso por sus concentraciones estacionales de elefantes — una de las más grandes del mundo.
           </p>
 
-          <div className="article-highlight-box">
-            <h4>🚙 Safari en Jeep Privado — Organizado por SLTCS</h4>
+          {/* Jeep safari photo */}
+          <figure className="article-figure">
+            <img
+              src={JEEP_SAFARI}
+              alt="Safari en jeep privado en el Parque Nacional de Minneriya, Sri Lanka"
+              className="article-photo"
+              style={{ maxHeight: "360px" }}
+            />
+            <figcaption>Safari en jeep privado en el Parque Nacional de Minneriya — organizado por SLTCS para tu grupo exclusivamente</figcaption>
+          </figure>
+
+          <div className="article-callout-box">
+            <p className="article-callout-title">🚙 Safari en Jeep Privado — Organizado por SLTCS</p>
             <p>
               SLTCS puede organizar un safari en jeep completamente privado para tu visita a Minneriya o Yala. A diferencia de los safaris en grupo compartido, tu jeep privado está reservado exclusivamente para tu grupo — sin extraños, sin horario fijo.
             </p>
@@ -162,6 +203,17 @@ export default function Itinerary4N5D() {
               Lo que realmente distingue la experiencia SLTCS es que tu conductor dedicado puede acompañarte dentro del jeep, proporcionando comentarios en tiempo real sobre la fauna, los hábitats y la historia del parque durante todo el safari.
             </p>
           </div>
+
+          {/* Couple with driver photo */}
+          <figure className="article-figure">
+            <img
+              src={SIGIRIYA_COUPLE}
+              alt="Pareja con su conductor SLTCS en la cima de Sigiriya"
+              className="article-photo"
+              style={{ maxHeight: "360px" }}
+            />
+            <figcaption>Tu conductor te acompaña en los lugares turísticos — proporcionando comentarios culturales en tiempo real</figcaption>
+          </figure>
 
           <h3 id="dia-3">Día 3 — Kandy: Templo del Diente</h3>
 
@@ -189,6 +241,17 @@ export default function Itinerary4N5D() {
             Pasa la mañana explorando el <strong>Fuerte de Galle</strong> — una fortificación colonial holandesa notablemente bien conservada del siglo XVII. Pasea por las murallas, explora las tiendas boutique y galerías dentro de las murallas del fuerte, y toma un café con vistas al Océano Índico.
           </p>
 
+          {/* Galle Fort photo */}
+          <figure className="article-figure">
+            <img
+              src={GALLE_FORT}
+              alt="Fuerte de Galle, Sri Lanka — patrimonio colonial holandés del siglo XVII"
+              className="article-photo"
+              style={{ maxHeight: "380px" }}
+            />
+            <figcaption>El Fuerte de Galle — una de las fortalezas coloniales mejor conservadas de Asia, declarada Patrimonio Mundial de la UNESCO</figcaption>
+          </figure>
+
           <p>
             Tu conductor te trasladará al Aeropuerto de Colombo para tu vuelo de salida.
           </p>
@@ -199,19 +262,31 @@ export default function Itinerary4N5D() {
             <table className="article-price-table">
               <caption>Inclusiones del itinerario de 5 días</caption>
               <thead>
-                <tr><th>Elemento</th><th>Incluido</th></tr>
+                <tr>
+                  <th style={{ textAlign: "left" }}>Elemento</th>
+                  <th>Incluido</th>
+                </tr>
               </thead>
               <tbody>
                 {[
-                  ["Vehículo privado con aire acondicionado", "✓ Sí"],
-                  ["Conductor dedicado durante los 5 días", "✓ Sí"],
-                  ["Recogida y entrega en el aeropuerto", "✓ Sí"],
-                  ["Ajustes flexibles del itinerario", "✓ Sí"],
-                  ["Reservas de hotel", "No incluido (podemos recomendar)"],
-                  ["Tarifas de entrada a los lugares", "No incluido (se pagan por separado)"],
-                  ["Comidas", "No incluido"],
+                  ["Vehículo privado con aire acondicionado", true],
+                  ["Conductor dedicado durante los 5 días", true],
+                  ["Recogida y entrega en el aeropuerto", true],
+                  ["Gasolina, peajes y alojamiento del conductor", true],
+                  ["Ajustes flexibles del itinerario", true],
+                  ["Reservas de hotel", false],
+                  ["Tarifas de entrada a los lugares", false],
+                  ["Comidas", false],
                 ].map(([item, inc]) => (
-                  <tr key={item}><td>{item}</td><td>{inc}</td></tr>
+                  <tr key={item as string}>
+                    <td style={{ textAlign: "left" }}>{item as string}</td>
+                    <td>
+                      {inc
+                        ? <span className="article-included-yes">✓ Sí</span>
+                        : <span className="article-included-no">No incluido</span>
+                      }
+                    </td>
+                  </tr>
                 ))}
               </tbody>
             </table>
@@ -227,6 +302,48 @@ export default function Itinerary4N5D() {
             Un Conductor Guía Chófer enriquecerá significativamente tu experiencia en Sigiriya, Kandy y Galle proporcionando comentarios culturales certificados en cada lugar.
           </p>
 
+          <div className="article-price-table-wrapper">
+            <table className="article-price-table">
+              <caption>Precios indicativos para 5 días — Sedán (hasta 3 personas), precios en USD</caption>
+              <thead>
+                <tr>
+                  <th>Plan</th>
+                  <th>Tipo de Conductor</th>
+                  <th>Precio (5 días)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bronze</td>
+                  <td>Conductor en Prácticas</td>
+                  <td>USD 310</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                      Silver
+                      <span className="badge-popular">Más Popular</span>
+                    </span>
+                  </td>
+                  <td>Conductor Turístico / Guía</td>
+                  <td>USD 380</td>
+                </tr>
+                <tr>
+                  <td>Gold</td>
+                  <td>Chófer Guía (Altamente Valorado)</td>
+                  <td>USD 480</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="article-table-note">
+              Para grupos de 3 o más personas, considera la furgoneta KDH. Consulta nuestra <Link href="/#planes" className="article-link">página de Planes</Link> para ver todos los precios y tipos de vehículo.
+            </p>
+            <div className="article-price-table-cta">
+              <p>¿Quieres un presupuesto para este itinerario?</p>
+              <Link href="/#contact" className="article-price-cta-btn">SOLICITAR PRESUPUESTO GRATUITO →</Link>
+            </div>
+          </div>
+
           <div className="article-cta-box">
             <p>¿Listo para reservar tu tour de 5 días por Sri Lanka? Cuéntanos tus fechas de viaje y tamaño del grupo. Responderemos con un presupuesto personalizado en 24 horas.</p>
             <Link href="/#contact" className="article-cta-btn">OBTENER PRESUPUESTO GRATUITO</Link>
@@ -234,28 +351,28 @@ export default function Itinerary4N5D() {
 
           {/* Related articles */}
           <div className="article-related">
-            <h3>Artículos Relacionados</h3>
-            <div className="article-related-grid">
-              <div className="article-related-card" style={{ opacity: 0.6, cursor: "default" }}>
-                <p>Itinerario Sri Lanka 5 Noches / 6 Días: Cultura + Naturaleza en Vehículo Privado</p>
-                <span style={{ color: "#c9a84c", fontSize: "0.7rem", fontWeight: 700 }}>Próximamente — 6 junio 2026</span>
+            <div className="article-related-title">ARTÍCULOS RELACIONADOS</div>
+            <div style={{ opacity: 0.6 }}>
+              <div style={{ padding: "0.75rem 0", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
+                <p className="article-related-item-title">Itinerario Sri Lanka 5 Noches / 6 Días: Cultura + Naturaleza en Vehículo Privado</p>
+                <p className="article-related-item-date">Próximamente — 6 junio 2026</p>
               </div>
-              <div className="article-related-card" style={{ opacity: 0.6, cursor: "default" }}>
-                <p>Itinerario Sri Lanka 6 Noches / 7 Días: Experiencia Completa de la Isla</p>
-                <span style={{ color: "#c9a84c", fontSize: "0.7rem", fontWeight: 700 }}>Próximamente — 6 junio 2026</span>
+              <div style={{ padding: "0.75rem 0" }}>
+                <p className="article-related-item-title">Itinerario Sri Lanka 6 Noches / 7 Días: Experiencia Completa de la Isla</p>
+                <p className="article-related-item-date">Próximamente — 6 junio 2026</p>
               </div>
             </div>
           </div>
 
           <div className="article-back-link">
-            <Link href="/information/itinerarios">← Itinerarios</Link>
+            <Link href="/">← Volver al Inicio</Link>
           </div>
         </main>
 
         {/* Sidebar */}
         <aside className="article-sidebar">
           <div className="article-sidebar-category">
-            <Link href="/information/itinerarios">Itinerarios</Link>
+            <Link href="/#itinerarios">Itinerarios</Link>
           </div>
           <div className="article-sidebar-cta">
             <p>¿Listo para planificar tu viaje a Sri Lanka? Obtén un presupuesto gratuito y sin compromiso.</p>
