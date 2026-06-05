@@ -92,7 +92,8 @@ export default function PrivateDriverHowToHire() {
 
       {/* HERO */}
       <div className="article-hero" style={{ backgroundImage: `url(${HERO_IMG})` }}>
-        <div className="article-hero-overlay">
+        <div className="article-hero-overlay" />
+        <div className="article-hero-content">
           <span className="article-category-badge">GUÍA DE CONDUCTOR PRIVADO</span>
           <h1 className="article-hero-title">
             Conductor Privado en Sri Lanka: Cómo Contratar un Conductor Seguro y Fiable para tu Viaje
