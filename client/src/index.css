@@ -1461,21 +1461,19 @@ footer {
   background-position: center;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
   margin-top: 72px;
 }
 .article-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 55%, transparent 100%);
 }
 .article-hero-content {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 860px;
-  padding: 2rem 2rem;
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1520,8 +1518,8 @@ footer {
 }
 @media (max-width: 768px) {
   .article-layout { grid-template-columns: 1fr; gap: 2rem; padding: 1.5rem 1rem; }
-  .article-hero { height: 280px; }
-  .article-hero-content { padding: 1.25rem 1rem; }
+  .article-hero { height: 300px; }
+  .article-hero-content { padding: 1.5rem 1rem 1.25rem; }
 }
 .article-main { min-width: 0; }
 .article-breadcrumb {
