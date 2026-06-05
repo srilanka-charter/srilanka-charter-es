@@ -5,7 +5,6 @@ import ArticleNav from "@/components/ArticleNav";
 const HERO_IMG = "/manus-storage/article6_hero_sigiriya_aerial_acc21167.webp";
 const SIGIRIYA_OVERVIEW = "/manus-storage/article6_sigiriya_overview_4a782e2a.webp";
 const SIGIRIYA_TOP = "/manus-storage/article6_sigiriya_top_tourists_f75c454c.webp";
-const SIGIRIYA_COUPLE = "/manus-storage/article6_sigiriya_couple_driver_fd86abc8.webp";
 const JEEP_SAFARI = "/manus-storage/article6_jeep_safari_tourists_1e171723.webp";
 const GALLE_FORT = "/manus-storage/article6_galle_fort_c1533b3a.webp";
 
@@ -203,17 +202,6 @@ export default function Itinerary4N5D() {
               Lo que realmente distingue la experiencia SLTCS es que tu conductor dedicado puede acompañarte dentro del jeep, proporcionando comentarios en tiempo real sobre la fauna, los hábitats y la historia del parque durante todo el safari.
             </p>
           </div>
-
-          {/* Couple with driver photo */}
-          <figure className="article-figure">
-            <img
-              src={SIGIRIYA_COUPLE}
-              alt="Pareja con su conductor SLTCS en la cima de Sigiriya"
-              className="article-photo"
-              style={{ maxHeight: "360px" }}
-            />
-            <figcaption>Tu conductor te acompaña en los lugares turísticos — proporcionando comentarios culturales en tiempo real</figcaption>
-          </figure>
 
           <h3 id="dia-3">Día 3 — Kandy: Templo del Diente</h3>
 
