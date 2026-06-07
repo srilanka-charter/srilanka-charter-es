@@ -7,7 +7,7 @@ import nodemailer from "nodemailer";
 
 const GMAIL_USER = process.env.GMAIL_USER || "";
 const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || "";
-const NOTIFY_EMAIL = "srilanka.41032@gmail.com";
+const NOTIFY_EMAILS = ["srilanka.41032@gmail.com", "contact@gohellolanka.com"];
 
 function createTransporter() {
   return nodemailer.createTransport({
@@ -91,7 +91,7 @@ export const appRouter = router({
 
         await transporter.sendMail({
           from: `"SLTCS Charter ES" <${GMAIL_USER}>`,
-          to: NOTIFY_EMAIL,
+          to: NOTIFY_EMAILS.join(", "),
           subject: `[SLTCS ES] Nueva consulta de ${input.fullName} (${input.country})`,
           html: htmlBody,
           text: bodyLines.join("\n"),
