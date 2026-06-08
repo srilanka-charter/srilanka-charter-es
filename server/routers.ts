@@ -92,6 +92,7 @@ export const appRouter = router({
         await transporter.sendMail({
           from: `"SLTCS Charter ES" <${GMAIL_USER}>`,
           to: NOTIFY_EMAILS.join(", "),
+          replyTo: input.email,
           subject: `[SLTCS ES] Nueva consulta de ${input.fullName} (${input.country})`,
           html: htmlBody,
           text: bodyLines.join("\n"),
