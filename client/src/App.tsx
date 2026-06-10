@@ -18,6 +18,9 @@ import ItinerariosCategory from "./pages/info/ItinerariosCategory";
 import DriverHireCostsChecklist from "./pages/info/DriverHireCostsChecklist";
 import VanHireFamiliesGroups from "./pages/info/VanHireFamiliesGroups";
 import Itinerary4N5D from "./pages/info/Itinerary4N5D";
+import Itinerary5N6D from "./pages/info/Itinerary5N6D";
+import Itinerary6N7D from "./pages/info/Itinerary6N7D";
+import ItineraryTriangle from "./pages/info/ItineraryTriangle";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -42,6 +45,9 @@ function Router() {
       <Route path={"/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos"} component={VanHireFamiliesGroups} />
       {/* Information articles - Itinerarios */}
       <Route path={"/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias"} component={Itinerary4N5D} />
+      <Route path={"/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias"} component={Itinerary5N6D} />
+      <Route path={"/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias"} component={Itinerary6N7D} />
+      <Route path={"/information/itinerarios/ruta-triangulo-cultural-sri-lanka"} component={ItineraryTriangle} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -43,3 +43,12 @@
 - [x] 記事6: 英語版スペイン語訳版として写真追加・表デザイン改善・価格表に問い合わせリンク追加
 - [x] INFORMACIÓNプルダウンからITINERARIOSを削除（Home.tsx・ArticleNav.tsx・Navbar.tsx）
 - [x] ヘッダーのITINERARIOSドロップダウンに記事6（4 Noches/5 Días）リンクを追加
+
+## 6月6日分 記事作成（Itinerariosカテゴリー）
+
+- [x] 記事7: /information/itinerarios/itinerario-sri-lanka-5-noches-6-dias（5泊6日）
+- [x] 記事8: /information/itinerarios/itinerario-sri-lanka-6-noches-7-dias（6泊7日）
+- [x] 記事9: /information/itinerarios/ruta-triangulo-cultural-sri-lanka（スリランカ三角形ルート）
+- [x] App.tsxに3記事のルーティングを追加
+- [x] Navbar・Home・ArticleNavのITINERARIOSドロップダウンに3記事リンクを追加
+- [x] ItinerariosCategory.tsxの「Próximamente」カードをリンク付きに更新

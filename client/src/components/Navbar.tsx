@@ -49,9 +49,9 @@ export default function Navbar() {
 
   const itineraryLinks = [
     { label: "4 Noches / 5 Días", href: "/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias" },
-    { label: "5 Noches / 6 Días", href: null },
-    { label: "6 Noches / 7 Días", href: null },
-    { label: "5–7 Días Cultural", href: null },
+    { label: "5 Noches / 6 Días", href: "/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias" },
+    { label: "6 Noches / 7 Días", href: "/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias" },
+    { label: "5–7 Días Cultural", href: "/information/itinerarios/ruta-triangulo-cultural-sri-lanka" },
     { label: "10 Días – 2 Semanas", href: null },
   ];
 
