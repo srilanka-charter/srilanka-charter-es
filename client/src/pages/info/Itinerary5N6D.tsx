@@ -2,8 +2,12 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
-const HERO_IMG = "/manus-storage/article7_ella_train_hero_35f57ffa.jpeg";
-const ROUTE_MAP = "/manus-storage/article7_route_map_5n6d_full_78b3567b.png";
+const HERO_IMG = "/manus-storage/art7_ella_train_hero_587a6e16.webp";
+const ELLA_TRAIN_BODY = "/manus-storage/art7_ella_train_body_0b0ac31a.webp";
+const ROUTE_MAP_FULL = "/manus-storage/art7_route_map_full_730e3d57.webp";
+const SIGIRIYA_TOP_DRIVER = "/manus-storage/art7_sigiriya_top_driver_f79c47fe.webp";
+const NINE_ARCHES_BRIDGE = "/manus-storage/art7_nine_arches_bridge_47491b83.webp";
+const YALA_FAMILY_JEEP = "/manus-storage/art7_yala_family_jeep_bcfc9c70.webp";
 
 const TOC = [
   { id: "descripcion-general", label: "Descripción General: 5 Noches / 6 Días Cultura + Naturaleza" },
@@ -80,10 +84,18 @@ export default function Itinerary5N6D() {
       <div className="article-layout">
         <main className="article-main">
 
+          <p className="article-lead">
+            En seis días, puedes combinar los mejores destinos culturales y naturales de Sri Lanka — desde la fortaleza rupestre de Sigiriya hasta el safari de leopardos en Yala, pasando por las tierras altas del té y el icónico Puente de los Nueve Arcos en Ella — todo en un vehículo privado con aire acondicionado y un conductor dedicado.
+          </p>
+
+          <blockquote className="article-blockquote">
+            Todos los itinerarios de SLTCS son flexibles por diseño. Si quieres quedarte más tiempo en Ella, saltarte una parada o añadir un desvío espontáneo, tu conductor se adaptará. Este plan es un punto de partida, no un horario rígido.
+          </blockquote>
+
           {/* TOC */}
           <div className="article-toc">
             <button className="article-toc-toggle" onClick={() => setTocOpen(o => !o)}>
-              TABLA DE CONTENIDOS {tocOpen ? "▲" : "▼"}
+              TABLA DE CONTENIDOS <span>{tocOpen ? "▲" : "▼"}</span>
             </button>
             {tocOpen && (
               <ul className="article-toc-list">
@@ -99,8 +111,13 @@ export default function Itinerary5N6D() {
           <h2 id="descripcion-general">Descripción General: 5 Noches / 6 Días Cultura + Naturaleza</h2>
 
           <figure className="article-figure">
-            <img src={HERO_IMG} alt="Tren de las tierras altas de Sri Lanka cruzando el Puente de los Nueve Arcos en Ella" loading="lazy" />
-            <figcaption>El icónico tren de las tierras altas de Sri Lanka cruzando el Puente de los Nueve Arcos en Ella</figcaption>
+            <img
+              src={ELLA_TRAIN_BODY}
+              alt="Tren de las tierras altas de Sri Lanka cruzando el Puente de los Nueve Arcos en Ella"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>El icónico tren de las tierras altas cruzando el Puente de los Nueve Arcos en Ella — una de las imágenes más emblemáticas de Sri Lanka</figcaption>
           </figure>
 
           <p>
@@ -111,28 +128,41 @@ export default function Itinerary5N6D() {
             Este plan es especialmente popular entre parejas y grupos pequeños que desean experimentar tanto la profundidad cultural como la belleza natural de Sri Lanka sin sentirse apresurados.
           </p>
 
-          <div className="article-overview-table">
+          <div className="article-price-table-wrapper">
             <table className="article-price-table">
+              <caption>Resumen del itinerario de 5 noches / 6 días</caption>
               <thead>
                 <tr>
-                  <th>Detalle</th>
-                  <th>Información</th>
+                  <th style={{ textAlign: "left" }}>Detalle</th>
+                  <th style={{ textAlign: "left" }}>Información</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Duración</td><td>6 Días / 5 Noches</td></tr>
-                <tr><td>Enfoque</td><td>Cultura + Naturaleza</td></tr>
-                <tr><td>Destinos Principales</td><td>Sigiriya, Kandy, Ella, Yala, Galle</td></tr>
-                <tr><td>Ideal Para</td><td>Parejas y grupos pequeños</td></tr>
-                <tr><td>Punto de Inicio / Fin</td><td>Aeropuerto de Colombo (BIA)</td></tr>
-                <tr><td>Plan Recomendado</td><td>Silver o Gold</td></tr>
+                {[
+                  ["Duración", "6 Días / 5 Noches"],
+                  ["Enfoque", "Cultura + Naturaleza"],
+                  ["Destinos Principales", "Sigiriya, Kandy, Ella, Yala, Galle"],
+                  ["Ideal Para", "Parejas y grupos pequeños"],
+                  ["Punto de Inicio / Fin", "Aeropuerto de Colombo (BIA)"],
+                  ["Plan Recomendado", "Silver o Gold"],
+                ].map(([det, info]) => (
+                  <tr key={det}>
+                    <td style={{ textAlign: "left" }}><strong>{det}</strong></td>
+                    <td style={{ textAlign: "left" }}>{info}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
 
           <figure className="article-figure">
-            <img src={ROUTE_MAP} alt="Mapa ilustrado de la ruta de 5 noches y 6 días por Sri Lanka" loading="lazy" />
-            <figcaption>Mapa ilustrado de la ruta — Sigiriya → Kandy → Ella → Yala → Galle</figcaption>
+            <img
+              src={ROUTE_MAP_FULL}
+              alt="Mapa ilustrado de la ruta de 5 noches y 6 días por Sri Lanka con los días marcados"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>Mapa de la ruta — Colombo → Sigiriya → Kandy → Ella → Yala → Galle → Colombo</figcaption>
           </figure>
 
           <h2 id="dia-a-dia">Itinerario Día a Día</h2>
@@ -140,42 +170,76 @@ export default function Itinerary5N6D() {
           <h3 id="dia-1">Día 1 — Llegada → Sigiriya</h3>
 
           <p>
-            Llegada al Aeropuerto de Colombo. Tu conductor te recibirá en la terminal de llegadas y te trasladará al norte hacia la zona de Sigiriya (aproximadamente 3–4 horas), con parada en el <strong>Templo Rupestre de Dambulla</strong> (Patrimonio UNESCO) en el camino.
+            Llegada al Aeropuerto Internacional de Bandaranaike (BIA) en Colombo. Tu conductor te recibirá en la terminal de llegadas con un cartel con tu nombre y te trasladará al norte hacia la zona de Sigiriya (aproximadamente 3–4 horas).
           </p>
 
           <p>
-            Check-in en tu hotel en la zona de Sigiriya o Kandalama.
+            En el camino, haz una parada en el <strong>Templo Rupestre de Dambulla</strong> (Patrimonio UNESCO) — cinco grutas excavadas en la roca que albergan más de 150 estatuas de Buda y murales del siglo I a.C. Check-in en tu hotel en la zona de Sigiriya o Kandalama.
           </p>
 
           <h3 id="dia-2">Día 2 — Fortaleza de la Roca de Sigiriya y Safari</h3>
 
           <p>
-            Escala la <strong>Fortaleza de la Roca de Sigiriya</strong> (Patrimonio UNESCO) por la mañana — reserva entre 2,5 y 3 horas para la subida y bajada completa.
+            Comienza el día con una ascensión temprana a la <strong>Fortaleza de la Roca de Sigiriya</strong> (Patrimonio UNESCO) — la ciudadela real del siglo V que se eleva 200 metros sobre la jungla. La cima ofrece vistas panorámicas impresionantes y las famosas pinturas al fresco del Muro del Espejo.
           </p>
+
+          <p>
+            Reserva entre 2,5 y 3 horas para la subida y bajada completa.
+          </p>
+
+          <figure className="article-figure">
+            <img
+              src={SIGIRIYA_TOP_DRIVER}
+              alt="Conductor SLTCS con turistas en la cima de la Roca de Sigiriya"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>Tu conductor SLTCS puede acompañarte hasta la cima de Sigiriya, compartiendo la historia y el contexto cultural del lugar</figcaption>
+          </figure>
 
           <p>
             Por la tarde, realiza un safari en jeep en el <strong>Parque Nacional de Minneriya o Kaudulla</strong>, donde podrás encontrarte con grandes manadas de elefantes salvajes congregándose alrededor de los antiguos embalses.
           </p>
 
+          <div className="article-callout-box">
+            <p className="article-callout-title">🚙 Safari en Jeep Privado — Organizado por SLTCS</p>
+            <p>
+              SLTCS puede organizar un safari en jeep completamente privado para tu visita a Minneriya o Yala. A diferencia de los safaris en grupo compartido, tu jeep privado está reservado exclusivamente para tu grupo — sin extraños, sin horario fijo.
+            </p>
+            <p>
+              Lo que realmente distingue la experiencia SLTCS es que tu conductor dedicado puede acompañarte dentro del jeep, proporcionando comentarios en tiempo real sobre la fauna, los hábitats y la historia del parque durante todo el safari. Indícanos en tu consulta si deseas incluir el safari privado y lo añadiremos a tu presupuesto.
+            </p>
+          </div>
+
           <h3 id="dia-3">Día 3 — Kandy</h3>
 
           <p>
-            Viaje a <strong>Kandy</strong> a través del Jardín de Especias de Matale. Visita el <strong>Templo del Diente Sagrado</strong> (Patrimonio UNESCO) y los hermosos <strong>Jardines Botánicos de Peradeniya</strong>, que albergan más de 4.000 especies de plantas, incluida una famosa avenida de palmas reales.
+            Viaje a <strong>Kandy</strong> (aproximadamente 2,5 horas) a través del Jardín de Especias de Matale. Visita el <strong>Templo de la Reliquia del Sagrado Diente</strong> (Patrimonio UNESCO), el lugar budista más sagrado de Sri Lanka, que alberga una reliquia del Buda.
           </p>
 
           <p>
-            Tarde libre en el centro de Kandy.
+            Por la tarde, explora los <strong>Jardines Botánicos Reales de Peradeniya</strong>, que albergan más de 4.000 especies de plantas, incluida una famosa avenida de palmas reales. Por la noche, asiste a una actuación de danza cultural de Kandy.
           </p>
 
           <h3 id="dia-4">Día 4 — Nuwara Eliya y Ella</h3>
 
           <p>
-            Conduce a través de las impresionantes <strong>tierras altas del té</strong> hasta Nuwara Eliya. Visita una fábrica de té y disfruta del té de la tarde con vistas a la plantación.
+            Conduce a través de las impresionantes <strong>tierras altas del té</strong> hasta Nuwara Eliya — la 'Pequeña Inglaterra' de Sri Lanka, situada a 1.868 metros sobre el nivel del mar. Visita una fábrica de té para una visita guiada y degustación.
           </p>
 
           <p>
-            Continúa hasta <strong>Ella</strong> — un encantador pueblo de montaña famoso por el <strong>Puente de los Nueve Arcos</strong>, un viaducto de la época colonial rodeado de jungla y terrazas de té. Noche en Ella.
+            Continúa hasta <strong>Ella</strong> — un encantador pueblo de montaña famoso por el <strong>Puente de los Nueve Arcos</strong>, un viaducto de la época colonial rodeado de jungla y terrazas de té.
           </p>
+
+          <figure className="article-figure">
+            <img
+              src={NINE_ARCHES_BRIDGE}
+              alt="Vista aérea del Puente de los Nueve Arcos en Ella, Sri Lanka, rodeado de plantaciones de té"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>El Puente de los Nueve Arcos en Ella — uno de los viaductos ferroviarios más fotografiados de Asia, construido en la era colonial sin una sola pieza de acero</figcaption>
+          </figure>
 
           <h3 id="dia-5">Día 5 — Safari en el Parque Nacional de Yala</h3>
 
@@ -187,10 +251,20 @@ export default function Itinerary5N6D() {
             También podrás avistar elefantes, osos perezosos, cocodrilos y cientos de especies de aves. Noche cerca de Yala o Tissamaharama.
           </p>
 
+          <figure className="article-figure">
+            <img
+              src={YALA_FAMILY_JEEP}
+              alt="Familia disfrutando de un safari en jeep privado en el Parque Nacional de Yala, Sri Lanka"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>Safari en jeep privado en el Parque Nacional de Yala — organizado exclusivamente para tu grupo por SLTCS</figcaption>
+          </figure>
+
           <h3 id="dia-6">Día 6 — Fuerte de Galle → Salida</h3>
 
           <p>
-            Conduce hasta el <strong>Fuerte de Galle</strong> (Patrimonio UNESCO) en la costa sur. Pasa la mañana explorando las murallas coloniales holandesas, las tiendas boutique y las vistas al océano.
+            Conduce hasta el <strong>Fuerte de Galle</strong> (Patrimonio UNESCO) en la costa sur. Pasa la mañana explorando las murallas coloniales holandesas del siglo XVII, las tiendas boutique y las vistas al océano Índico.
           </p>
 
           <p>
@@ -201,20 +275,35 @@ export default function Itinerary5N6D() {
 
           <div className="article-price-table-wrapper">
             <table className="article-price-table">
+              <caption>Inclusiones del itinerario de 6 días</caption>
               <thead>
                 <tr>
-                  <th>Elemento</th>
+                  <th style={{ textAlign: "left" }}>Elemento</th>
                   <th>Incluido</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Vehículo privado con aire acondicionado</td><td>✓ Sí</td></tr>
-                <tr><td>Conductor dedicado durante los 6 días</td><td>✓ Sí</td></tr>
-                <tr><td>Recogida y traslado al aeropuerto</td><td>✓ Sí</td></tr>
-                <tr><td>Ajustes flexibles del itinerario</td><td>✓ Sí</td></tr>
-                <tr><td>Reservas de hotel</td><td>No incluido (podemos recomendar)</td></tr>
-                <tr><td>Tarifa del safari en jeep de Yala</td><td>No incluido (se paga por separado)</td></tr>
-                <tr><td>Comidas</td><td>No incluido</td></tr>
+                {[
+                  ["Vehículo privado con aire acondicionado", true],
+                  ["Conductor dedicado durante los 6 días", true],
+                  ["Recogida y traslado al aeropuerto", true],
+                  ["Gasolina, peajes y alojamiento del conductor", true],
+                  ["Ajustes flexibles del itinerario", true],
+                  ["Reservas de hotel", false],
+                  ["Tarifa del safari en jeep de Yala", false],
+                  ["Tarifas de entrada a los lugares", false],
+                  ["Comidas", false],
+                ].map(([item, inc]) => (
+                  <tr key={item as string}>
+                    <td style={{ textAlign: "left" }}>{item as string}</td>
+                    <td>
+                      {inc
+                        ? <span className="article-included-yes">✓ Sí</span>
+                        : <span className="article-included-no">No incluido</span>
+                      }
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

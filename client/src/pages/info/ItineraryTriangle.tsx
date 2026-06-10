@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
-const HERO_IMG = "/manus-storage/article9_sigiriya_aerial_hero_3827b32a.jpeg";
+const HERO_IMG = "/manus-storage/art9_sigiriya_aerial_hero_c9f842e7.webp";
+const SIGIRIYA_AERIAL_BODY = "/manus-storage/art9_sigiriya_aerial_body_efd28a32.webp";
+const SIGIRIYA_TOP_GROUP = "/manus-storage/art9_sigiriya_top_group_8675227a.webp";
+const MINNERIYA_JEEP = "/manus-storage/art9_minneriya_jeep_c6c7b5b8.webp";
+const SAFARI_FAMILY_SELFIE = "/manus-storage/art9_safari_family_selfie_f934b6a2.webp";
+const KANDY_TEMPLE_LAKE = "/manus-storage/art9_kandy_temple_lake_ad1b0589.webp";
 
 const TOC = [
   { id: "descripcion-general", label: "Descripción General: Triángulo Cultural 5–7 Días" },
@@ -80,10 +85,18 @@ export default function ItineraryTriangle() {
       <div className="article-layout">
         <main className="article-main">
 
+          <p className="article-lead">
+            El Triángulo Cultural de Sri Lanka concentra cinco sitios Patrimonio Mundial de la UNESCO en una sola región — antiguas capitales reales, fortalezas rupestres talladas en la roca y templos sagrados que narran más de 2.500 años de historia budista y cingalesa. Este itinerario está diseñado para quienes quieren explorar esa historia en profundidad.
+          </p>
+
+          <blockquote className="article-blockquote">
+            Para este itinerario, recomendamos especialmente el Plan Gold con un Conductor Guía Chófer certificado. El contexto histórico y cultural que proporciona en cada sitio transforma completamente la experiencia — la diferencia entre ver ruinas y entender una civilización.
+          </blockquote>
+
           {/* TOC */}
           <div className="article-toc">
             <button className="article-toc-toggle" onClick={() => setTocOpen(o => !o)}>
-              TABLA DE CONTENIDOS {tocOpen ? "▲" : "▼"}
+              TABLA DE CONTENIDOS <span>{tocOpen ? "▲" : "▼"}</span>
             </button>
             {tocOpen && (
               <ul className="article-toc-list">
@@ -99,8 +112,13 @@ export default function ItineraryTriangle() {
           <h2 id="descripcion-general">Descripción General: Triángulo Cultural 5–7 Días</h2>
 
           <figure className="article-figure">
-            <img src={HERO_IMG} alt="Vista aérea de la Fortaleza de la Roca de Sigiriya rodeada de jungla tropical" loading="lazy" />
-            <figcaption>Vista aérea de la Fortaleza de la Roca de Sigiriya — el corazón del Triángulo Cultural de Sri Lanka</figcaption>
+            <img
+              src={SIGIRIYA_AERIAL_BODY}
+              alt="Vista aérea de la Fortaleza de la Roca de Sigiriya rodeada de jungla tropical en Sri Lanka"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>Vista aérea de la Fortaleza de la Roca de Sigiriya — la ciudadela real del siglo V que se eleva 200 metros sobre la jungla tropical</figcaption>
           </figure>
 
           <p>
@@ -111,21 +129,29 @@ export default function ItineraryTriangle() {
             Este itinerario está diseñado para los amantes de la historia y la cultura que desean explorar estos sitios en profundidad, en lugar de recorrerlos superficialmente. El plan puede completarse en 5 días a un ritmo moderado, o extenderse a 7 días para una experiencia más relajada y completa.
           </p>
 
-          <div className="article-overview-table">
+          <div className="article-price-table-wrapper">
             <table className="article-price-table">
+              <caption>Resumen del itinerario del Triángulo Cultural</caption>
               <thead>
                 <tr>
-                  <th>Detalle</th>
-                  <th>Información</th>
+                  <th style={{ textAlign: "left" }}>Detalle</th>
+                  <th style={{ textAlign: "left" }}>Información</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Duración</td><td>5–7 Días</td></tr>
-                <tr><td>Enfoque</td><td>Sitios Patrimonio UNESCO y Safari</td></tr>
-                <tr><td>Destinos Principales</td><td>Anuradhapura, Sigiriya, Dambulla, Polonnaruwa, Kandy</td></tr>
-                <tr><td>Ideal Para</td><td>Entusiastas de la historia y la cultura</td></tr>
-                <tr><td>Punto de Inicio / Fin</td><td>Aeropuerto de Colombo (BIA)</td></tr>
-                <tr><td>Plan Recomendado</td><td>Silver o Gold</td></tr>
+                {[
+                  ["Duración", "5–7 Días"],
+                  ["Enfoque", "Sitios Patrimonio UNESCO y Safari"],
+                  ["Destinos Principales", "Anuradhapura, Sigiriya, Dambulla, Polonnaruwa, Kandy"],
+                  ["Ideal Para", "Entusiastas de la historia y la cultura"],
+                  ["Punto de Inicio / Fin", "Aeropuerto de Colombo (BIA)"],
+                  ["Plan Recomendado", "Silver o Gold"],
+                ].map(([det, info]) => (
+                  <tr key={det}>
+                    <td style={{ textAlign: "left" }}><strong>{det}</strong></td>
+                    <td style={{ textAlign: "left" }}>{info}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -144,6 +170,7 @@ export default function ItineraryTriangle() {
 
           <div className="article-price-table-wrapper">
             <table className="article-price-table">
+              <caption>Sitios Patrimonio Mundial de la UNESCO en el Triángulo Cultural</caption>
               <thead>
                 <tr>
                   <th>Sitio</th>
@@ -186,11 +213,11 @@ export default function ItineraryTriangle() {
           <h3 id="dia-1">Día 1 — Llegada → Anuradhapura</h3>
 
           <p>
-            Llegada al Aeropuerto de Colombo. Conduce hacia el norte hasta <strong>Anuradhapura</strong> (aproximadamente 4–5 horas). Anuradhapura fue la primera capital de Sri Lanka y uno de los centros de poder más antiguos del mundo antiguo.
+            Llegada al Aeropuerto Internacional de Bandaranaike (BIA) en Colombo. Conduce hacia el norte hasta <strong>Anuradhapura</strong> (aproximadamente 4–5 horas). Anuradhapura fue la primera capital de Sri Lanka y uno de los centros de poder más antiguos del mundo antiguo.
           </p>
 
           <p>
-            Visita vespertina al <strong>Sri Maha Bodhi</strong> — el árbol de higuera sagrado más antiguo del mundo, plantado en el siglo III a.C. a partir de una rama del árbol de la iluminación de Buda.
+            Visita vespertina al <strong>Sri Maha Bodhi</strong> — el árbol de higuera sagrado más antiguo del mundo, plantado en el siglo III a.C. a partir de una rama del árbol de la iluminación de Buda. Check-in en tu hotel.
           </p>
 
           <h3 id="dia-2">Día 2 — Sigiriya y Dambulla</h3>
@@ -199,9 +226,49 @@ export default function ItineraryTriangle() {
             Traslado a la zona de Sigiriya. Escala la <strong>Fortaleza de la Roca de Sigiriya</strong> por la mañana — una antigua ciudadela construida en la cima de una roca de 200 metros de altura, decorada con famosos frescos de doncellas celestiales.
           </p>
 
+          <figure className="article-figure">
+            <img
+              src={SIGIRIYA_TOP_GROUP}
+              alt="Grupo de turistas con conductor SLTCS en la cima de la Roca de Sigiriya, Sri Lanka"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>La cima de Sigiriya — tu conductor SLTCS puede acompañarte durante la ascensión, compartiendo la historia de esta extraordinaria fortaleza rupestre</figcaption>
+          </figure>
+
           <p>
             Por la tarde, visita el <strong>Templo Rupestre de Dambulla</strong> — cinco cuevas que albergan más de 150 estatuas de Buda y pinturas murales que datan del siglo I a.C.
           </p>
+
+          <div className="article-callout-box">
+            <p className="article-callout-title">🚙 Safari en Jeep Privado en Minneriya — Organizado por SLTCS</p>
+            <p>
+              En el Día 2, SLTCS puede organizar un safari en jeep privado en el <strong>Parque Nacional de Minneriya o Kaudulla</strong> para avistar las famosas manadas de elefantes salvajes que se congregan alrededor de los embalses. A diferencia de los safaris en grupo compartido, tu jeep privado está reservado exclusivamente para tu grupo.
+            </p>
+            <p>
+              Indícanos en tu consulta si deseas incluir el safari privado y lo añadiremos a tu presupuesto.
+            </p>
+          </div>
+
+          <figure className="article-figure">
+            <img
+              src={MINNERIYA_JEEP}
+              alt="Safari en jeep privado en el Parque Nacional de Minneriya, Sri Lanka, con elefantes salvajes"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>Safari en jeep privado en el Parque Nacional de Minneriya — el lugar más fácil de Sri Lanka para avistar grandes manadas de elefantes salvajes</figcaption>
+          </figure>
+
+          <figure className="article-figure">
+            <img
+              src={SAFARI_FAMILY_SELFIE}
+              alt="Familia tomando una foto durante el safari en jeep en Sri Lanka"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>Los safaris privados de SLTCS están reservados exclusivamente para tu grupo — sin extraños, sin horario fijo, a tu propio ritmo</figcaption>
+          </figure>
 
           <h3 id="dia-3">Día 3 — Polonnaruwa</h3>
 
@@ -223,6 +290,16 @@ export default function ItineraryTriangle() {
             Visita los <strong>Jardines Botánicos de Peradeniya</strong> y disfruta de una actuación de danza tradicional kandiana por la tarde.
           </p>
 
+          <figure className="article-figure">
+            <img
+              src={KANDY_TEMPLE_LAKE}
+              alt="Templo del Diente Sagrado de Kandy al atardecer reflejado en el lago de Kandy, Sri Lanka"
+              className="article-photo"
+              loading="lazy"
+            />
+            <figcaption>El Templo del Diente Sagrado al atardecer, reflejado en el lago de Kandy — una de las imágenes más icónicas de Sri Lanka</figcaption>
+          </figure>
+
           <h3 id="dia-5">Día 5 — Kandy → Salida</h3>
 
           <p>
@@ -237,6 +314,7 @@ export default function ItineraryTriangle() {
 
           <div className="article-price-table-wrapper">
             <table className="article-price-table">
+              <caption>Actividades adicionales para la versión de 7 días</caption>
               <thead>
                 <tr>
                   <th>Día Adicional</th>
@@ -268,7 +346,7 @@ export default function ItineraryTriangle() {
 
           <div className="article-price-table-wrapper">
             <table className="article-price-table">
-              <caption>Precios indicativos para 5 días — Sedán (hasta 3 personas), precios en USD</caption>
+              <caption>Precios indicativos — Sedán (hasta 3 personas), precios en USD</caption>
               <thead>
                 <tr>
                   <th>Plan</th>

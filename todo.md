@@ -52,3 +52,10 @@
 - [x] App.tsxに3記事のルーティングを追加
 - [x] Navbar・Home・ArticleNavのITINERARIOSドロップダウンに3記事リンクを追加
 - [x] ItinerariosCategory.tsxの「Próximamente」カードをリンク付きに更新
+
+## 6月11日分 記事リライト（写真追加）
+
+- [x] 記事7（5泊6日）: 英語版から収集した写真6枚をアップロード・記事に挿入（Ella列車・Sigiriya頂上・9アーチ橋・Yalaファミリージープ・ルートマップ）
+- [x] 記事8（6泊7日）: 英語版から収集した写真9枚をアップロード・記事に挿入（Kandy寺院・Sigiriya観光客・Sigiriyaドライバー・紅茶農園・9アーチ橋・Yalaジープ）
+- [x] 記事9（三角形ルート）: 英語版から収集した写真6枚をアップロード・記事に挿入（Sigiriya空撮・頂上グループ・Minneriyaジープ・サファリ家族・Kandy寺院湖）
+- [x] ItinerariosCategory.tsxの記事7・8・9のサムネイル画像URLを新しいwebp URLに更新
