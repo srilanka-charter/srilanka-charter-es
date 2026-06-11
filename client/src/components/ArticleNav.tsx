@@ -17,10 +17,20 @@ const INFO_CATEGORIES = [
   { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
 ];
 
+const ITINERARY_LINKS = [
+  { label: "4 Noches / 5 Días", href: "/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias" },
+  { label: "5 Noches / 6 Días", href: "/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias" },
+  { label: "6 Noches / 7 Días", href: "/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias" },
+  { label: "5–7 Días – Triángulo Cultural", href: "/information/itinerarios/ruta-triangulo-cultural-sri-lanka" },
+  { label: "10 Días – 2 Semanas", href: "/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas" },
+];
+
 export default function ArticleNav() {
+  const [itineraryOpen, setItineraryOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileItineraryOpen, setMobileItineraryOpen] = useState(false);
   const [mobileInfoOpen, setMobileInfoOpen] = useState(false);
   const [mobileLangOpen, setMobileLangOpen] = useState(false);
 
@@ -33,7 +43,20 @@ export default function ArticleNav() {
         </a>
         <ul className="nav-links">
           <li><a href="/#planes">PLANES</a></li>
-          <li><a href="/#itinerarios">ITINERARIOS</a></li>
+          <li
+            className="nav-dropdown"
+            onMouseEnter={() => setItineraryOpen(true)}
+            onMouseLeave={() => setItineraryOpen(false)}
+          >
+            <button>ITINERARIOS</button>
+            {itineraryOpen && (
+              <div className="nav-dropdown-menu">
+                {ITINERARY_LINKS.map((item) => (
+                  <a key={item.href} href={item.href}>{item.label}</a>
+                ))}
+              </div>
+            )}
+          </li>
           <li><a href="/price">PRECIO</a></li>
           <li
             className="nav-dropdown"
@@ -86,7 +109,25 @@ export default function ArticleNav() {
       {mobileOpen && (
         <div className="mobile-menu open" style={{ top: "72px" }}>
           <a href="/#planes">Planes</a>
-          <a href="/#itinerarios">Itinerarios</a>
+          <div className="mobile-accordion">
+            <button
+              className="mobile-accordion-btn"
+              onClick={() => setMobileItineraryOpen((o) => !o)}
+            >
+              <span>Itinerarios</span>
+              <svg
+                width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                style={{ transform: mobileItineraryOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}
+              ><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            {mobileItineraryOpen && (
+              <div className="mobile-accordion-body">
+                {ITINERARY_LINKS.map((item) => (
+                  <a key={item.href} href={item.href}>{item.label}</a>
+                ))}
+              </div>
+            )}
+          </div>
           <a href="/price">Precio</a>
           <div className="mobile-accordion">
             <button

@@ -156,7 +156,7 @@ function Navbar() {
                 <a href="/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias">5 Noches / 6 Días</a>
                 <a href="/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias">6 Noches / 7 Días</a>
                 <a href="/information/itinerarios/ruta-triangulo-cultural-sri-lanka">5–7 Días – Triángulo Cultural</a>
-                <span style={{ display: "block", padding: "8px 12px", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)" }}>10 Días – 2 Semanas <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <a href="/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas">10 Días – 2 Semanas</a>
               </div>
             )}
           </li>
@@ -212,10 +212,10 @@ function Navbar() {
             {mobileItineraryOpen && (
               <div className="mobile-accordion-body">
                 <a href="/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias">4 Noches / 5 Días</a>
-                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>5 Noches / 6 Días <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
-                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>6 Noches / 7 Días <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
-                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>5–7 Días – Triángulo Cultural <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
-                <span style={{ display: "block", padding: "8px 16px", fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>10 Días – 2 Semanas <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "0.6rem" }}>Próximamente</span></span>
+                <a href="/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias">5 Noches / 6 Días</a>
+                <a href="/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias">6 Noches / 7 Días</a>
+                <a href="/information/itinerarios/ruta-triangulo-cultural-sri-lanka">5–7 Días – Triángulo Cultural</a>
+                <a href="/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas">10 Días – 2 Semanas</a>
               </div>
             )}
           </div>
