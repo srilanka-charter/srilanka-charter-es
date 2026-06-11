@@ -1940,7 +1940,7 @@ footer {
 .category-article-read { font-size: 0.8rem; color: #c9a84c; font-weight: 600; }
 
 /* Article Photo */
-.article-photo { width: 100%; border-radius: 8px; margin: 1.25rem 0 0.5rem; object-fit: cover; max-height: 420px; }
+.article-photo { width: 100%; border-radius: 8px; margin: 1.25rem 0 0.5rem; object-fit: contain; max-height: none; display: block; }
 .article-photo-caption { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-style: italic; margin-bottom: 1.25rem; text-align: center; }
 
 /* Day Card (Itinerary) */
