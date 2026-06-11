@@ -39,6 +39,8 @@ export default function Itinerary10Days() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-10-days-2-weeks-itinerary" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-10-jours-2-semaines" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-10-tage-2-wochen-reiseroute" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-10-days-2-weeks-itinerary" },
     ];
     hreflangs.forEach(({ lang, url }) => {

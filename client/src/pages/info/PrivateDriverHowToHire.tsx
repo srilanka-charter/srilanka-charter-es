@@ -47,6 +47,8 @@ export default function PrivateDriverHowToHire() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-private-driver-how-to-hire" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/sri-lanka-chauffeur-prive-comment-louer" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/sri-lanka-privater-fahrer-wie-buchen" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-private-driver-how-to-hire" },
     ];
     const addedLinks: HTMLLinkElement[] = [];

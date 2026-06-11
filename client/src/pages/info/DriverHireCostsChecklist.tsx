@@ -37,6 +37,8 @@ export default function DriverHireCostsChecklist() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/cost-booking-guide/driver-hire-sri-lanka-costs-safety-checklist" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-cout-reservation/location-chauffeur-sri-lanka-couts-securite-checklist" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/kosten-buchung/fahrermiete-sri-lanka-kosten-sicherheit-checkliste" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/cost-booking-guide/driver-hire-sri-lanka-costs-safety-checklist" },
     ];
     hreflangs.forEach(({ lang, url }) => {

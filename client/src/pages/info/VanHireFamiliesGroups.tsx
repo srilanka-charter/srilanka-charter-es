@@ -32,6 +32,8 @@ export default function VanHireFamiliesGroups() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/family-group-travel/van-hire-driver-sri-lanka-families-small-groups" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/voyage-famille-groupe/location-van-chauffeur-sri-lanka-familles-petits-groupes" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/familien-gruppenreisen/van-miete-fahrer-sri-lanka-familien-kleingruppen" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/family-group-travel/van-hire-driver-sri-lanka-families-small-groups" },
     ];
     hreflangs.forEach(({ lang, url }) => {

@@ -72,6 +72,8 @@ export default function ChauffeurGuideDriverVsGuide() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide/chauffeur-guide-sri-lanka-driver-vs-tourist-guide" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/chauffeur-guide-sri-lanka-conducteur-vs-guide-touristique" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/chauffeur-guide-sri-lanka-fahrer-vs-reisefuehrer" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide/chauffeur-guide-sri-lanka-driver-vs-tourist-guide" },
     ];
     const addedLinks: HTMLLinkElement[] = [];

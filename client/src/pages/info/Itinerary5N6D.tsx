@@ -37,6 +37,8 @@ export default function Itinerary5N6D() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-nights-6-days-itinerary" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-5-nuits-6-jours" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-5-naechte-6-tage-reiseroute" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-nights-6-days-itinerary" },
     ];
     hreflangs.forEach(({ lang, url }) => {

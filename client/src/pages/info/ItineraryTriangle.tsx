@@ -38,6 +38,8 @@ export default function ItineraryTriangle() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/ruta-triangulo-cultural-sri-lanka" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-7-days-cultural-triangle-itinerary" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-5-7-jours-triangle-culturel" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-5-7-tage-kulturdreieck-reiseroute" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-7-days-cultural-triangle-itinerary" },
     ];
     hreflangs.forEach(({ lang, url }) => {
