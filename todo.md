@@ -59,3 +59,11 @@
 - [x] 記事8（6泊7日）: 英語版から収集した写真9枚をアップロード・記事に挿入（Kandy寺院・Sigiriya観光客・Sigiriyaドライバー・紅茶農園・9アーチ橋・Yalaジープ）
 - [x] 記事9（三角形ルート）: 英語版から収集した写真6枚をアップロード・記事に挿入（Sigiriya空撮・頂上グループ・Minneriyaジープ・サファリ家族・Kandy寺院湖）
 - [x] ItinerariosCategory.tsxの記事7・8・9のサムネイル画像URLを新しいwebp URLに更新
+
+## 6月11日分 記事10新規作成
+
+- [x] 記事10（10日間/2週間ルート）: 英語版から写真4枚収集・アップロード（バン+海岸道路・10日間ルートマップ・9アーチ橋列車・ミリッサビーチ空撮）
+- [x] Itinerary10Days.tsx 新規作成（写真4枚・10日間日程・延長オプション表・SEOメタタグ・hreflang・CTA）
+- [x] App.tsxに記事10のルート追加（/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas）
+- [x] Navbar.tsxのITINERARIOSドロップダウンに記事10のリンクを追加（「Próximamente」を解除）
+- [x] ItinerariosCategory.tsxの記事10カードを「Próximamente」から通常リンクカードに変更

@@ -21,6 +21,7 @@ import Itinerary4N5D from "./pages/info/Itinerary4N5D";
 import Itinerary5N6D from "./pages/info/Itinerary5N6D";
 import Itinerary6N7D from "./pages/info/Itinerary6N7D";
 import ItineraryTriangle from "./pages/info/ItineraryTriangle";
+import Itinerary10Days from "./pages/info/Itinerary10Days";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -48,6 +49,7 @@ function Router() {
       <Route path={"/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias"} component={Itinerary5N6D} />
       <Route path={"/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias"} component={Itinerary6N7D} />
       <Route path={"/information/itinerarios/ruta-triangulo-cultural-sri-lanka"} component={ItineraryTriangle} />
+      <Route path={"/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas"} component={Itinerary10Days} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

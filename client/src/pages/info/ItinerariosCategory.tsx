@@ -33,11 +33,10 @@ const ARTICLES = [
   },
   {
     slug: "/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas",
-    image: "/manus-storage/article6_hero_sigiriya_aerial_acc21167.webp",
+    image: "/manus-storage/art10_van_coastal_road_hero_6a19696b.webp",
     date: "7 junio 2026",
     title: "Itinerario Sri Lanka 10 Días / 2 Semanas: La Ruta Definitiva por la Isla",
     desc: "La ruta más completa para quienes tienen dos semanas. Desde el norte cultural hasta la costa sur, pasando por las tierras altas del té y los parques nacionales.",
-    comingSoon: true,
   },
 ];
 
@@ -65,28 +64,15 @@ export default function ItinerariosCategory() {
       </div>
       <div className="category-articles-grid">
         {ARTICLES.map(a => (
-          a.comingSoon ? (
-            <div key={a.slug} className="category-article-card category-article-card--coming-soon">
-              <div className="category-article-img" style={{ backgroundImage: `url(${a.image})` }}>
-                <div className="category-coming-soon-badge">Próximamente</div>
-              </div>
-              <div className="category-article-body">
-                <span className="category-article-date">{a.date}</span>
-                <h2 className="category-article-title">{a.title}</h2>
-                <p className="category-article-desc">{a.desc}</p>
-              </div>
+          <Link key={a.slug} href={a.slug} className="category-article-card">
+            <div className="category-article-img" style={{ backgroundImage: `url(${a.image})` }} />
+            <div className="category-article-body">
+              <span className="category-article-date">{a.date}</span>
+              <h2 className="category-article-title">{a.title}</h2>
+              <p className="category-article-desc">{a.desc}</p>
+              <span className="category-article-read">Leer más →</span>
             </div>
-          ) : (
-            <Link key={a.slug} href={a.slug} className="category-article-card">
-              <div className="category-article-img" style={{ backgroundImage: `url(${a.image})` }} />
-              <div className="category-article-body">
-                <span className="category-article-date">{a.date}</span>
-                <h2 className="category-article-title">{a.title}</h2>
-                <p className="category-article-desc">{a.desc}</p>
-                <span className="category-article-read">Leer más →</span>
-              </div>
-            </Link>
-          )
+          </Link>
         ))}
       </div>
     </div>
