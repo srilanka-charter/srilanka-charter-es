@@ -52,24 +52,20 @@ export default function ItinerariosCategory() {
     const prevCanonical = canonical?.href ?? '';
     if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
     canonical.href = "https://es.srilanka-charter.com/information/itinerarios";
-    // ─ hreflang ──────────────────────────────────────────────────────────────────
-    const hreflangData = [
-      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios" },
-      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary" },
-      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires" },
-      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten" },
-      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary" },
-    ];
+    // hreflang
     const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
     existingHreflangs.forEach((el) => el.remove());
     const addedHreflangs: HTMLLinkElement[] = [];
-    hreflangData.forEach(({ hreflang, href }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.setAttribute("hreflang", hreflang);
-      link.href = href;
-      document.head.appendChild(link);
-      addedHreflangs.push(link);
+    const hreflangs = [
+      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios" },
+      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten" },
+      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary" },
+    ];
+    hreflangs.forEach(({ lang, url }) => {
+      const el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); el.href = url; document.head.appendChild(el);
+      addedHreflangs.push(el);
     });
     return () => {
       document.title = prevTitle;

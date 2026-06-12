@@ -1352,33 +1352,30 @@ function FloatingCTA() {
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function Home() {
   useEffect(() => {
-    // ─ Canonical ─────────────────────────────────────────────────────────────────
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    document.title = "Alquiler de Coche con Conductor Privado en Sri Lanka | SLTCS";
+    // canonical
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     const prevCanonical = canonical?.href ?? '';
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
     canonical.href = "https://es.srilanka-charter.com/";
-    // ─ hreflang ──────────────────────────────────────────────────────────────────
-    const hreflangData = [
-      { hreflang: "es", href: "https://es.srilanka-charter.com/" },
-      { hreflang: "en", href: "https://en.srilanka-charter.com/" },
-      { hreflang: "fr", href: "https://fr.srilanka-charter.com/" },
-      { hreflang: "de", href: "https://de.srilanka-charter.com/" },
-      { hreflang: "x-default", href: "https://en.srilanka-charter.com/" },
-    ];
+    // hreflang
     const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
     existingHreflangs.forEach((el) => el.remove());
     const addedHreflangs: HTMLLinkElement[] = [];
-    hreflangData.forEach(({ hreflang, href }) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.setAttribute('hreflang', hreflang);
-      link.href = href;
-      document.head.appendChild(link);
-      addedHreflangs.push(link);
+    const hreflangs = [
+      { lang: "es", url: "https://es.srilanka-charter.com/" },
+      { lang: "en", url: "https://en.srilanka-charter.com/" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/" },
+      { lang: "de", url: "https://de.srilanka-charter.com/" },
+      { lang: "x-default", url: "https://en.srilanka-charter.com/" },
+    ];
+    hreflangs.forEach(({ lang, url }) => {
+      const el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); el.href = url; document.head.appendChild(el);
+      addedHreflangs.push(el);
     });
     return () => {
       addedHreflangs.forEach((el) => el.remove());
