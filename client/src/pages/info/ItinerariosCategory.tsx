@@ -43,6 +43,28 @@ const ARTICLES = [
 export default function ItinerariosCategory() {
   useEffect(() => {
     document.title = "Itinerarios Sri Lanka en Conductor Privado | SLTCS";
+    // canonical
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://es.srilanka-charter.com/information/itinerarios";
+    // hreflang
+    const hreflangs = [
+      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios" },
+      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten" },
+      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary" },
+    ];
+    hreflangs.forEach(({ lang, url }) => {
+      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
+      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
+      el.href = url;
+    });
+    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
   }, []);
 
   return (

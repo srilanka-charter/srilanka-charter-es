@@ -32,6 +32,8 @@ export default function FamilyGroupTravelCategory() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/viajes-familia-grupos" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/family-group-travel" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/voyage-famille-groupe" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/familien-gruppenreisen" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/family-group-travel" },
     ];
     const addedLinks: HTMLLinkElement[] = [];

@@ -32,6 +32,8 @@ export default function CostBookingGuideCategory() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/guia-costes-reserva" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/cost-booking-guide" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-cout-reservation" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/kosten-buchung" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/cost-booking-guide" },
     ];
     const addedLinks: HTMLLinkElement[] = [];

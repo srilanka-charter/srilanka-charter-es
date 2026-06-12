@@ -1351,6 +1351,32 @@ function FloatingCTA() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function Home() {
+  useEffect(() => {
+    document.title = "Alquiler de Coche con Conductor Privado en Sri Lanka | SLTCS";
+    // canonical
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://es.srilanka-charter.com/";
+    // hreflang
+    const hreflangs = [
+      { lang: "es", url: "https://es.srilanka-charter.com/" },
+      { lang: "en", url: "https://en.srilanka-charter.com/" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/" },
+      { lang: "de", url: "https://de.srilanka-charter.com/" },
+      { lang: "x-default", url: "https://en.srilanka-charter.com/" },
+    ];
+    hreflangs.forEach(({ lang, url }) => {
+      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
+      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
+      el.href = url;
+    });
+    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
+  }, []);
+
   return (
     <div style={{ margin: 0, padding: 0 }}>
       <Navbar />
