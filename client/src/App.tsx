@@ -22,6 +22,8 @@ import Itinerary5N6D from "./pages/info/Itinerary5N6D";
 import Itinerary6N7D from "./pages/info/Itinerary6N7D";
 import ItineraryTriangle from "./pages/info/ItineraryTriangle";
 import Itinerary10Days from "./pages/info/Itinerary10Days";
+import BestTimeToVisit from "./pages/info/BestTimeToVisit";
+import TravelTipsSafetyCategory from "./pages/info/TravelTipsSafetyCategory";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -50,6 +52,10 @@ function Router() {
       <Route path={"/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias"} component={Itinerary6N7D} />
       <Route path={"/information/itinerarios/ruta-triangulo-cultural-sri-lanka"} component={ItineraryTriangle} />
       <Route path={"/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas"} component={Itinerary10Days} />
+      {/* Information category - Travel Tips & Safety */}
+      <Route path={"/information/consejos-viaje-seguridad"} component={TravelTipsSafetyCategory} />
+      {/* Information articles - Travel Tips & Safety */}
+      <Route path={"/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka"} component={BestTimeToVisit} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

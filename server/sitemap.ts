@@ -25,6 +25,9 @@ const URLS = [
   { loc: "/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias", changefreq: "monthly", priority: "0.8" },
   { loc: "/information/itinerarios/ruta-triangulo-cultural-sri-lanka", changefreq: "monthly", priority: "0.8" },
   { loc: "/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas", changefreq: "monthly", priority: "0.8" },
+  // Travel Tips & Safety category and articles
+  { loc: "/information/consejos-viaje-seguridad", changefreq: "monthly", priority: "0.8" },
+  { loc: "/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka", changefreq: "monthly", priority: "0.8" },
 ];
 
 export function registerSitemapRoute(app: Express) {

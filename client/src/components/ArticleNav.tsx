@@ -15,6 +15,7 @@ const INFO_CATEGORIES = [
   { label: "Guía de Conductor Privado", href: "/information/guia-conductor-privado" },
   { label: "Guía de Costes y Reserva", href: "/information/guia-costes-reserva" },
   { label: "Viajes en Familia y Grupos", href: "/information/viajes-familia-grupos" },
+  { label: "Consejos de Viaje y Seguridad", href: "/information/consejos-viaje-seguridad" },
 ];
 
 const ITINERARY_LINKS = [

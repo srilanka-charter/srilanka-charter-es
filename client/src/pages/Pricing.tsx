@@ -418,29 +418,6 @@ export default function Pricing() {
     script.textContent = JSON.stringify(jsonLd);
     document.head.appendChild(script);
 
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/price";
-
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/price" },
-      { lang: "en", url: "https://en.srilanka-charter.com/price" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/price" },
-      { lang: "de", url: "https://de.srilanka-charter.com/price" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/price" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-
     return () => {
       document.title = "SLTCS｜Alquiler de coche con conductor en Sri Lanka";
       metaDesc!.content = prevDesc;
