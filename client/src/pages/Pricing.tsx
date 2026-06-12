@@ -383,6 +383,35 @@ export default function Pricing() {
       ],
     };
 
+    // ─ Canonical ─────────────────────────────────────────────────────────────────
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const prevCanonical = canonical?.href ?? '';
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://es.srilanka-charter.com/price";
+    // ─ hreflang ──────────────────────────────────────────────────────────────────
+    const hreflangData = [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/price" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/price" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/price" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/price" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/price" },
+    ];
+    const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
+    existingHreflangs.forEach((el) => el.remove());
+    const addedHreflangs: HTMLLinkElement[] = [];
+    hreflangData.forEach(({ hreflang, href }) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.setAttribute('hreflang', hreflang);
+      link.href = href;
+      document.head.appendChild(link);
+      addedHreflangs.push(link);
+    });
+
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.id = "price-jsonld";
@@ -393,6 +422,9 @@ export default function Pricing() {
       document.title = "SLTCS｜Alquiler de coche con conductor en Sri Lanka";
       metaDesc!.content = prevDesc;
       document.getElementById("price-jsonld")?.remove();
+    
+      addedHreflangs.forEach((el) => el.remove());
+      if (canonical) canonical.href = prevCanonical;
     };
   }, []);
 

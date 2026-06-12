@@ -52,6 +52,8 @@ export default function PrivateDriverGuideCategory() {
     const hreflangs = [
       { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado" },
       { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide" },
+      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive" },
+      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber" },
       { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide" },
     ];
     const addedLinks: HTMLLinkElement[] = [];

@@ -42,7 +42,41 @@ const ARTICLES = [
 
 export default function ItinerariosCategory() {
   useEffect(() => {
+    const prevTitle = document.title;
     document.title = "Itinerarios Sri Lanka en Conductor Privado | SLTCS";
+    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!metaDesc) { metaDesc = document.createElement("meta"); metaDesc.name = "description"; document.head.appendChild(metaDesc); }
+    const prevDesc = metaDesc.content;
+    metaDesc.content = "Itinerarios modelo para explorar Sri Lanka en vehículo privado con conductor — desde 5 días hasta 2 semanas.";
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const prevCanonical = canonical?.href ?? '';
+    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
+    canonical.href = "https://es.srilanka-charter.com/information/itinerarios";
+    // ─ hreflang ──────────────────────────────────────────────────────────────────
+    const hreflangData = [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary" },
+    ];
+    const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
+    existingHreflangs.forEach((el) => el.remove());
+    const addedHreflangs: HTMLLinkElement[] = [];
+    hreflangData.forEach(({ hreflang, href }) => {
+      const link = document.createElement("link");
+      link.rel = "alternate";
+      link.setAttribute("hreflang", hreflang);
+      link.href = href;
+      document.head.appendChild(link);
+      addedHreflangs.push(link);
+    });
+    return () => {
+      document.title = prevTitle;
+      metaDesc!.content = prevDesc;
+      canonical!.href = prevCanonical;
+      addedHreflangs.forEach((el) => el.remove());
+    };
   }, []);
 
   return (
