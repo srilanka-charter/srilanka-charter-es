@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -20,29 +21,18 @@ const TOC = [
 export default function VanHireFamiliesGroups() {
   const [tocOpen, setTocOpen] = useState(true);
 
-  useEffect(() => {
-    document.title = "Alquiler de Furgoneta con Conductor en Sri Lanka: Familias y Grupos Pequeños (2026) | SLTCS";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Guía completa para alquilar una furgoneta con conductor en Sri Lanka para familias y grupos pequeños. Tipos de vehículo, precios 2026, planes y consejos prácticos.");
-    }
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/family-group-travel/van-hire-driver-sri-lanka-families-small-groups" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/voyage-famille-groupe/location-van-chauffeur-sri-lanka-familles-petits-groupes" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/familien-gruppenreisen/van-miete-fahrer-sri-lanka-familien-kleingruppen" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/family-group-travel/van-hire-driver-sri-lanka-families-small-groups" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
-  }, []);
+  useSEO({
+    title: "Alquiler de Furgoneta con Conductor en Sri Lanka: Familias y Grupos Pequeños (2026) | SLTCS",
+    description: "Guía completa para alquilar una furgoneta con conductor en Sri Lanka para familias y grupos pequeños. Tipos de vehículo, precios 2026, planes y consejos prácticos.",
+    path: "/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/family-group-travel/van-hire-driver-sri-lanka-families-small-groups" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/voyage-famille-groupe/location-van-chauffeur-sri-lanka-familles-petits-groupes" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/familien-gruppenreisen/van-miete-fahrer-sri-lanka-familien-kleingruppen" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/family-group-travel/van-hire-driver-sri-lanka-families-small-groups" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">

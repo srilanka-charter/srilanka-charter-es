@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { useLocation } from "wouter";
 import { trpc } from "@/lib/trpc";
 
@@ -1351,37 +1352,18 @@ function FloatingCTA() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function Home() {
-  useEffect(() => {
-    document.title = "Alquiler de Coche con Conductor Privado en Sri Lanka | SLTCS";
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    const prevCanonical = canonical?.href ?? '';
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/";
-    // hreflang
-    const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
-    existingHreflangs.forEach((el) => el.remove());
-    const addedHreflangs: HTMLLinkElement[] = [];
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/" },
-      { lang: "en", url: "https://en.srilanka-charter.com/" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/" },
-      { lang: "de", url: "https://de.srilanka-charter.com/" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      const el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); el.href = url; document.head.appendChild(el);
-      addedHreflangs.push(el);
-    });
-    return () => {
-      addedHreflangs.forEach((el) => el.remove());
-      if (canonical) canonical.href = prevCanonical;
-    };
-  }, []);
+  useSEO({
+    title: "Alquiler de Coche con Conductor Privado en Sri Lanka | SLTCS",
+    description: "Alquiler de coche con conductor privado en Sri Lanka. Servicio de charter privado con conductores certificados SLTDA. Planes Bronce, Plata y Oro desde $270.",
+    path: "/",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/" },
+    ],
+  });
 
   return (
     <div style={{ margin: 0, padding: 0 }}>

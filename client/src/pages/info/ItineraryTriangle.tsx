@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -26,29 +27,18 @@ const TOC = [
 export default function ItineraryTriangle() {
   const [tocOpen, setTocOpen] = useState(true);
 
-  useEffect(() => {
-    document.title = "Itinerario Triángulo Cultural de Sri Lanka 5–7 Días: Patrimonio UNESCO en Vehículo Privado (2026) | SLTCS";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Itinerario completo del Triángulo Cultural de Sri Lanka en 5 a 7 días en conductor privado. Anuradhapura, Sigiriya, Dambulla, Polonnaruwa y Kandy — los 5 sitios Patrimonio UNESCO del norte.");
-    }
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/itinerarios/ruta-triangulo-cultural-sri-lanka";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/ruta-triangulo-cultural-sri-lanka" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-7-days-cultural-triangle-itinerary" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-5-7-jours-triangle-culturel" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-5-7-tage-kulturdreieck-reiseroute" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-7-days-cultural-triangle-itinerary" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
-  }, []);
+  useSEO({
+    title: "Itinerario Triángulo Cultural de Sri Lanka 5–7 Días: Patrimonio UNESCO en Vehículo Privado (2026) | SLTCS",
+    description: "Itinerario completo del Triángulo Cultural de Sri Lanka en 5 a 7 días en conductor privado. Anuradhapura, Sigiriya, Dambulla, Polonnaruwa y Kandy — los 5 sitios Patrimonio UNESCO del norte.",
+    path: "/information/itinerarios/ruta-triangulo-cultural-sri-lanka",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios/ruta-triangulo-cultural-sri-lanka" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-7-days-cultural-triangle-itinerary" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-5-7-jours-triangle-culturel" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-5-7-tage-kulturdreieck-reiseroute" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-7-days-cultural-triangle-itinerary" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">

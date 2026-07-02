@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -55,36 +56,18 @@ const FAQ_ITEMS = [
 export default function ChauffeurGuideDriverVsGuide() {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title =
-      "Chófer Guía en Sri Lanka: Conductor Turístico vs Guía Nacional Explicado (2026) | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Descubre la diferencia entre Conductor Turístico, Chófer Guía y Guía Nacional en Sri Lanka. Guía completa para elegir el tipo de conductor adecuado para tu viaje con SLTCS."
-      );
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico";
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide/chauffeur-guide-sri-lanka-driver-vs-tourist-guide" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/chauffeur-guide-sri-lanka-conducteur-vs-guide-touristique" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/chauffeur-guide-sri-lanka-fahrer-vs-reisefuehrer" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide/chauffeur-guide-sri-lanka-driver-vs-tourist-guide" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate"; link.hreflang = lang; link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => { addedLinks.forEach((l) => l.remove()); };
-  }, []);
+  useSEO({
+    title: "Chófer Guía en Sri Lanka: Conductor Turístico vs Guía Nacional Explicado (2026) | SLTCS",
+    description: "Descubre la diferencia entre Conductor Turístico, Chófer Guía y Guía Nacional en Sri Lanka. Guía completa para elegir el tipo de conductor adecuado para tu viaje con SLTCS.",
+    path: "/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/private-driver-guide/chauffeur-guide-sri-lanka-driver-vs-tourist-guide" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/chauffeur-guide-sri-lanka-conducteur-vs-guide-touristique" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/chauffeur-guide-sri-lanka-fahrer-vs-reisefuehrer" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/private-driver-guide/chauffeur-guide-sri-lanka-driver-vs-tourist-guide" },
+    ],
+  });
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

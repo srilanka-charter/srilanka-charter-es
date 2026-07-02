@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import ArticleNav from "@/components/ArticleNav";
 
 const articles = [
@@ -14,39 +14,18 @@ const articles = [
 ];
 
 export default function CostBookingGuideCategory() {
-  useEffect(() => {
-    document.title = "Guía de Costes y Reserva — Sri Lanka Conductor Privado | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Precios transparentes, listas de verificación y todo lo que necesitas saber antes de reservar tu conductor privado en Sri Lanka."
-      );
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/information/guia-costes-reserva";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/guia-costes-reserva" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/cost-booking-guide" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-cout-reservation" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/kosten-buchungsratgeber" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/cost-booking-guide" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = lang;
-      link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => { addedLinks.forEach((l) => l.remove()); };
-  }, []);
+  useSEO({
+    title: "Guía de Costes y Reserva — Sri Lanka Conductor Privado | SLTCS",
+    description: "Precios transparentes, listas de verificación y todo lo que necesitas saber antes de reservar tu conductor privado en Sri Lanka.",
+    path: "/information/guia-costes-reserva",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/guia-costes-reserva" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/cost-booking-guide" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/guide-cout-reservation" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/kosten-buchungsratgeber" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/cost-booking-guide" },
+    ],
+  });
 
   return (
     <>

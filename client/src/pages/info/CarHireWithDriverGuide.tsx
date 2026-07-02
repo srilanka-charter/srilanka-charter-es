@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -31,36 +31,18 @@ const TOC = [
 ];
 
 export default function CarHireWithDriverGuide() {
-  useEffect(() => {
-    document.title =
-      "Alquiler de Coche con Conductor en Sri Lanka: Guía Completa para Primeras Visitas (2026) | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Compara todas las opciones de transporte en Sri Lanka: alquiler sin conductor, taxis, trenes y charter con conductor privado. Guía completa para primeras visitas con precios y consejos prácticos."
-      );
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa";
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-car-hire-with-driver-complete-guide" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/sri-lanka-location-voiture-avec-chauffeur-guide-complet" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/sri-lanka-mietwagen-mit-fahrer-vollstaendiger-ratgeber" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-car-hire-with-driver-complete-guide" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate"; link.hreflang = lang; link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => { addedLinks.forEach((l) => l.remove()); };
-  }, []);
+  useSEO({
+    title: "Alquiler de Coche con Conductor en Sri Lanka: Guía Completa para Primeras Visitas (2026) | SLTCS",
+    description: "Compara todas las opciones de transporte en Sri Lanka: alquiler sin conductor, taxis, trenes y charter con conductor privado. Guía completa para primeras visitas con precios y consejos prácticos.",
+    path: "/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-car-hire-with-driver-complete-guide" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/sri-lanka-location-voiture-avec-chauffeur-guide-complet" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/sri-lanka-mietwagen-mit-fahrer-vollstaendiger-ratgeber" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-car-hire-with-driver-complete-guide" },
+    ],
+  });
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

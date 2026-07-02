@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -29,29 +30,18 @@ const TOC = [
 export default function Itinerary6N7D() {
   const [tocOpen, setTocOpen] = useState(true);
 
-  useEffect(() => {
-    document.title = "Itinerario Sri Lanka 6 Noches / 7 Días: Experiencia Completa de la Isla en Vehículo Privado (2026) | SLTCS";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Itinerario completo de 6 noches y 7 días por Sri Lanka en conductor privado. Sigiriya, Kandy, Nuwara Eliya, Ella, Yala y Galle — la experiencia más completa de la isla.");
-    }
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-6-nights-7-days-itinerary" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-6-nuits-7-jours" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-6-naechte-7-tage-reiseroute" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-6-nights-7-days-itinerary" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
-  }, []);
+  useSEO({
+    title: "Itinerario Sri Lanka 6 Noches / 7 Días: Experiencia Completa de la Isla en Vehículo Privado (2026) | SLTCS",
+    description: "Itinerario completo de 6 noches y 7 días por Sri Lanka en conductor privado. Sigiriya, Kandy, Nuwara Eliya, Ella, Yala y Galle — la experiencia más completa de la isla.",
+    path: "/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-6-nights-7-days-itinerary" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-6-nuits-7-jours" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-6-naechte-7-tage-reiseroute" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-6-nights-7-days-itinerary" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">

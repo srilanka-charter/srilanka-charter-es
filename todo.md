@@ -67,3 +67,21 @@
 - [x] App.tsxに記事10のルート追加（/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas）
 - [x] Navbar.tsxのITINERARIOSドロップダウンに記事10のリンクを追加（「Próximamente」を解除）
 - [x] ItinerariosCategory.tsxの記事10カードを「Próximamente」から通常リンクカードに変更
+
+## SEO監査改善タスク（2026年7月2日）
+
+### 【緊急1】SSR/プリレンダリング対応
+- [ ] ExpressサーバーでSSRプリレンダリングを実装する（Googlebot向けに静的HTMLを返す）
+- [ ] 各ページのtitle・description・canonical・hreflang・JSON-LDを初期HTMLに含める
+
+### 【緊急2】メタタグ・カノニカル修正
+- [ ] index.htmlのデフォルトtitle/descriptionをSPAのデフォルト値として適切に設定する
+- [ ] useSEOフックがサーバーサイドでも機能するよう、SSR対応のメタタグ生成を実装する
+
+### 【高】LCP改善（モバイル5.6秒→2.5秒以内）
+- [ ] Google Fontsを非同期読み込み（media="print" onload）に変更する
+- [ ] ヒーロー画像にfetchPriority="high" loading="eager"を設定する
+- [ ] スライダー2枚目以降の画像にloading="lazy"を設定する
+
+### 【中】構造化データ確認・強化
+- [ ] トップページにOrganization/LocalBusiness JSON-LDを追加する

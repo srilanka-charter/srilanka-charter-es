@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import ArticleNav from "@/components/ArticleNav";
 
 const articles = [
@@ -32,41 +32,18 @@ const articles = [
 ];
 
 export default function PrivateDriverGuideCategory() {
-  useEffect(() => {
-    document.title = "Guía de Conductor Privado en Sri Lanka | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Todo lo que necesitas saber sobre contratar un conductor privado en Sri Lanka — desde elegir el servicio adecuado hasta entender qué incluye tu charter."
-      );
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/information/guia-conductor-privado";
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = lang;
-      link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => { addedLinks.forEach((l) => l.remove()); };
-  }, []);
+  useSEO({
+    title: "Guía de Conductor Privado en Sri Lanka | SLTCS",
+    description: "Todo lo que necesitas saber sobre contratar un conductor privado en Sri Lanka — desde elegir el servicio adecuado hasta entender qué incluye tu charter.",
+    path: "/information/guia-conductor-privado",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/guia-conductor-privado" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/private-driver-guide" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/private-driver-guide" },
+    ],
+  });
 
   return (
     <>

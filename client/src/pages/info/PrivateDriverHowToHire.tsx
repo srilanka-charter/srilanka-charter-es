@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -30,36 +31,18 @@ const TOC = [
 ];
 
 export default function PrivateDriverHowToHire() {
-  useEffect(() => {
-    document.title =
-      "Conductor Privado en Sri Lanka: Cómo Contratar un Conductor Seguro y Fiable (2026) | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Guía completa para contratar un conductor privado en Sri Lanka. Aprende a verificar licencias SLTDA, qué incluye la tarifa diaria, qué preguntas hacer y cómo evitar errores comunes."
-      );
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka";
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-private-driver-how-to-hire" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/sri-lanka-chauffeur-prive-comment-louer" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/sri-lanka-privater-fahrer-wie-buchen" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-private-driver-how-to-hire" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate"; link.hreflang = lang; link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => { addedLinks.forEach((l) => l.remove()); };
-  }, []);
+  useSEO({
+    title: "Conductor Privado en Sri Lanka: Cómo Contratar un Conductor Seguro y Fiable (2026) | SLTCS",
+    description: "Guía completa para contratar un conductor privado en Sri Lanka. Aprende a verificar licencias SLTDA, qué incluye la tarifa diaria, qué preguntas hacer y cómo evitar errores comunes.",
+    path: "/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-private-driver-how-to-hire" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/guide-chauffeur-prive/sri-lanka-chauffeur-prive-comment-louer" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/privater-fahrer-ratgeber/sri-lanka-privater-fahrer-wie-buchen" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/private-driver-guide/sri-lanka-private-driver-how-to-hire" },
+    ],
+  });
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

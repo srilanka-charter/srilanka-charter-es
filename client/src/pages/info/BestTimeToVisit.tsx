@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -35,45 +35,18 @@ const TOC = [
 ];
 
 export default function BestTimeToVisit() {
-  useEffect(() => {
-    document.title =
-      "Cuándo Visitar Sri Lanka: Guía del Clima Mes a Mes (2026) | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Descubre cuándo es el mejor momento para visitar Sri Lanka. Guía completa del clima mes a mes, los dos sistemas de monzón, temporada alta y baja, playas, safaris y tierras altas del té."
-      );
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka";
-
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/travel-tips-safety/best-time-to-visit-sri-lanka" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/conseils-voyage-securite/meilleure-periode-visiter-sri-lanka" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/reisetipps-sicherheit/beste-reisezeit-sri-lanka" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/travel-tips-safety/best-time-to-visit-sri-lanka" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = lang;
-      link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => {
-      addedLinks.forEach((l) => l.remove());
-    };
-  }, []);
+  useSEO({
+    title: "Cuándo Visitar Sri Lanka: Guía del Clima Mes a Mes (2026) | SLTCS",
+    description: "Descubre cuándo es el mejor momento para visitar Sri Lanka. Guía completa del clima mes a mes, los dos sistemas de monzón, temporada alta y baja, playas, safaris y tierras altas del té.",
+    path: "/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/travel-tips-safety/best-time-to-visit-sri-lanka" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/conseils-voyage-securite/meilleure-periode-visiter-sri-lanka" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/reisetipps-sicherheit/beste-reisezeit-sri-lanka" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/travel-tips-safety/best-time-to-visit-sri-lanka" },
+    ],
+  });
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

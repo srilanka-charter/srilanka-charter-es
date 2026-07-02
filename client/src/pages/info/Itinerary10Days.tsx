@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -27,29 +28,18 @@ const TOC = [
 export default function Itinerary10Days() {
   const [tocOpen, setTocOpen] = useState(true);
 
-  useEffect(() => {
-    document.title = "Itinerario Sri Lanka 10 Días / 2 Semanas: La Ruta Definitiva por la Isla (2026) | SLTCS";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Itinerario completo de Sri Lanka en 10 días a 2 semanas en conductor privado. Sigiriya, Kandy, tren del té, Ella, Yala y Galle — la ruta definitiva para primeros visitantes que quieren la experiencia completa.");
-    }
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-10-days-2-weeks-itinerary" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-10-jours-2-semaines" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-10-tage-2-wochen-reiseroute" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-10-days-2-weeks-itinerary" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
-  }, []);
+  useSEO({
+    title: "Itinerario Sri Lanka 10 Días / 2 Semanas: La Ruta Definitiva por la Isla (2026) | SLTCS",
+    description: "Itinerario completo de Sri Lanka en 10 días a 2 semanas en conductor privado. Sigiriya, Kandy, tren del té, Ella, Yala y Galle — la ruta definitiva para primeros visitantes que quieren la experiencia completa.",
+    path: "/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-10-days-2-weeks-itinerary" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-10-jours-2-semaines" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-10-tage-2-wochen-reiseroute" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-10-days-2-weeks-itinerary" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">

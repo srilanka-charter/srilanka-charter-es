@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import Navbar from "@/components/Navbar";
 
 // ─── Price Data ───────────────────────────────────────────────────────────────
@@ -331,101 +332,58 @@ function PlanCard({
 export default function Pricing() {
   const [currency, setCurrency] = useState<CurrencyKey>("EUR");
 
-  useEffect(() => {
-    document.title = "Precios de Alquiler de Coche con Conductor en Sri Lanka | SLTCS";
-
-    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.name = "description";
-      document.head.appendChild(metaDesc);
-    }
-    const prevDesc = metaDesc.content;
-    metaDesc.content =
-      "Precios de alquiler de coche con conductor en Sri Lanka. Planes Bronce, Plata y Oro desde $270. Sedán, Furgoneta y Van Grande. Precios en USD, GBP, EUR y AUD.";
-
-    const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: "Alquiler de Coche con Conductor Privado en Sri Lanka",
-      description:
-        "Servicio de alquiler de coche completamente privado en Sri Lanka con conductor de habla inglesa. Tres planes: Bronce, Plata, Oro.",
-      url: "https://es.srilanka-charter.com/price",
-      brand: {
-        "@type": "Brand",
-        name: "SLTCS – Alquiler de Coche con Conductor en Sri Lanka",
-      },
-      offers: [
-        {
-          "@type": "Offer",
-          name: "Plan Bronce – Sedán (2 días)",
-          price: "270",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: "https://es.srilanka-charter.com/price",
-        },
-        {
-          "@type": "Offer",
-          name: "Plan Plata – Sedán (2 días)",
-          price: "310",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: "https://es.srilanka-charter.com/price",
-        },
-        {
-          "@type": "Offer",
-          name: "Plan Oro – Sedán (2 días)",
-          price: "350",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: "https://es.srilanka-charter.com/price",
-        },
-      ],
-    };
-
-    // ─ Canonical ─────────────────────────────────────────────────────────────────
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    const prevCanonical = canonical?.href ?? '';
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/price";
-    // ─ hreflang ──────────────────────────────────────────────────────────────────
-    const hreflangData = [
+  useSEO({
+    title: "Precios de Alquiler de Coche con Conductor en Sri Lanka | SLTCS",
+    description: "Precios de alquiler de coche con conductor en Sri Lanka. Planes Bronce, Plata y Oro desde $270. Sedán, Furgoneta y Van Grande. Precios en USD, GBP, EUR y AUD.",
+    path: "/price",
+    hreflangs: [
       { hreflang: "es", href: "https://es.srilanka-charter.com/price" },
       { hreflang: "en", href: "https://en.srilanka-charter.com/price" },
       { hreflang: "fr", href: "https://fr.srilanka-charter.com/price" },
       { hreflang: "de", href: "https://de.srilanka-charter.com/price" },
       { hreflang: "x-default", href: "https://en.srilanka-charter.com/price" },
-    ];
-    const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
-    existingHreflangs.forEach((el) => el.remove());
-    const addedHreflangs: HTMLLinkElement[] = [];
-    hreflangData.forEach(({ hreflang, href }) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.setAttribute('hreflang', hreflang);
-      link.href = href;
-      document.head.appendChild(link);
-      addedHreflangs.push(link);
-    });
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "price-jsonld";
-    script.textContent = JSON.stringify(jsonLd);
-    document.head.appendChild(script);
-
-    return () => {
-      document.title = "SLTCS｜Alquiler de coche con conductor en Sri Lanka";
-      metaDesc!.content = prevDesc;
-      document.getElementById("price-jsonld")?.remove();
-      addedHreflangs.forEach((el) => el.remove());
-      if (canonical) canonical.href = prevCanonical;
-    };
-  }, []);
+    ],
+    jsonLdList: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: "Alquiler de Coche con Conductor Privado en Sri Lanka",
+        description: "Servicio de alquiler de coche completamente privado en Sri Lanka con conductor de habla inglesa. Tres planes: Bronce, Plata, Oro.",
+        url: "https://es.srilanka-charter.com/price",
+        brand: {
+          "@type": "Brand",
+          name: "SLTCS – Alquiler de Coche con Conductor en Sri Lanka",
+        },
+        offers: [
+          {
+            "@type": "Offer",
+            name: "Plan Bronce – Sedán (2 días)",
+            price: "270",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: "https://es.srilanka-charter.com/price",
+          },
+          {
+            "@type": "Offer",
+            name: "Plan Plata – Sedán (2 días)",
+            price: "310",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: "https://es.srilanka-charter.com/price",
+          },
+          {
+            "@type": "Offer",
+            name: "Plan Oro – Sedán (2 días)",
+            price: "350",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: "https://es.srilanka-charter.com/price",
+          },
+        ],
+      },
+    ],
+    jsonLdIdPrefix: "pricing",
+  });
 
   const scrollToContact = () => {
     window.location.href = "/#contact";

@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -25,29 +26,18 @@ const TOC = [
 export default function Itinerary5N6D() {
   const [tocOpen, setTocOpen] = useState(true);
 
-  useEffect(() => {
-    document.title = "Itinerario Sri Lanka 5 Noches / 6 Días: Cultura + Naturaleza en Vehículo Privado (2026) | SLTCS";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Itinerario completo de 5 noches y 6 días por Sri Lanka en conductor privado. Sigiriya, Kandy, Ella, Yala y Galle — la combinación perfecta de cultura y naturaleza.");
-    }
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-nights-6-days-itinerary" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-5-nuits-6-jours" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-5-naechte-6-tage-reiseroute" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-nights-6-days-itinerary" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-    return () => { document.querySelectorAll('link[hreflang]').forEach(el => el.remove()); };
-  }, []);
+  useSEO({
+    title: "Itinerario Sri Lanka 5 Noches / 6 Días: Cultura + Naturaleza en Vehículo Privado (2026) | SLTCS",
+    description: "Itinerario completo de 5 noches y 6 días por Sri Lanka en conductor privado. Sigiriya, Kandy, Ella, Yala y Galle — la combinación perfecta de cultura y naturaleza.",
+    path: "/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-nights-6-days-itinerary" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires/sri-lanka-itineraire-5-nuits-6-jours" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten/sri-lanka-5-naechte-6-tage-reiseroute" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary/sri-lanka-5-nights-6-days-itinerary" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">

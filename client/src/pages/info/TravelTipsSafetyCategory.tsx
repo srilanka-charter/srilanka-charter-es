@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import ArticleNav from "@/components/ArticleNav";
 
 const articles = [
@@ -14,39 +14,18 @@ const articles = [
 ];
 
 export default function TravelTipsSafetyCategory() {
-  useEffect(() => {
-    document.title = "Consejos de Viaje y Seguridad — Sri Lanka Conductor Privado | SLTCS";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc)
-      desc.setAttribute(
-        "content",
-        "Guías prácticas sobre clima, seguridad y consejos de viaje para planificar tu viaje a Sri Lanka con conductor privado."
-      );
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/information/consejos-viaje-seguridad";
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/consejos-viaje-seguridad" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/travel-tips-safety" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/conseils-voyage-securite" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/reisetipps-sicherheit" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/travel-tips-safety" },
-    ];
-    const addedLinks: HTMLLinkElement[] = [];
-    hreflangs.forEach(({ lang, url }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = lang;
-      link.href = url;
-      document.head.appendChild(link);
-      addedLinks.push(link);
-    });
-    return () => { addedLinks.forEach((l) => l.remove()); };
-  }, []);
+  useSEO({
+    title: "Consejos de Viaje y Seguridad — Sri Lanka Conductor Privado | SLTCS",
+    description: "Guías prácticas sobre clima, seguridad y consejos de viaje para planificar tu viaje a Sri Lanka con conductor privado.",
+    path: "/information/consejos-viaje-seguridad",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/consejos-viaje-seguridad" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/travel-tips-safety" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/conseils-voyage-securite" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/reisetipps-sicherheit" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/travel-tips-safety" },
+    ],
+  });
 
   return (
     <>

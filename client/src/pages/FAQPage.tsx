@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 
@@ -431,75 +432,26 @@ function AccordionItem({
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    const prevTitle = document.title;
-    document.title = PAGE_TITLE;
-
-    let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
-    }
-    const prevDesc = meta.content;
-    meta.content = PAGE_DESC;
-
-    // JSON-LD FAQ schema
-    const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: FAQ_ITEMS.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.plainText,
-        },
-      })),
-    };
-    // ─ Canonical ─────────────────────────────────────────────────────────────────
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    const prevCanonical = canonical?.href ?? '';
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://es.srilanka-charter.com/faq";
-    // ─ hreflang ──────────────────────────────────────────────────────────────────
-    const hreflangData = [
-      { hreflang: "es", href: "https://es.srilanka-charter.com/faq" },
-      { hreflang: "en", href: "https://en.srilanka-charter.com/faq" },
-      { hreflang: "fr", href: "https://fr.srilanka-charter.com/faq" },
-      { hreflang: "de", href: "https://de.srilanka-charter.com/faq" },
-      { hreflang: "x-default", href: "https://en.srilanka-charter.com/faq" },
-    ];
-    const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
-    existingHreflangs.forEach((el) => el.remove());
-    const addedHreflangs: HTMLLinkElement[] = [];
-    hreflangData.forEach(({ hreflang, href }) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.setAttribute('hreflang', hreflang);
-      link.href = href;
-      document.head.appendChild(link);
-      addedHreflangs.push(link);
-    });
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "faq-jsonld";
-    script.textContent = JSON.stringify(jsonLd);
-    document.head.appendChild(script);
-
-    return () => {
-      document.title = prevTitle;
-      if (meta) meta.content = prevDesc;
-      document.getElementById("faq-jsonld")?.remove();
-      addedHreflangs.forEach((el) => el.remove());
-      if (canonical) canonical.href = prevCanonical;
-    };
-  }, []);
+  useSEO({
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    path: "/faq",
+    jsonLdList: [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: FAQ_ITEMS.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.plainText,
+          },
+        })),
+      },
+    ],
+    jsonLdIdPrefix: "faq",
+  });
 
   return (
     <div

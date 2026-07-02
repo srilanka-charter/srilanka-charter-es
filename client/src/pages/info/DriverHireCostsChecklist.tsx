@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -23,33 +24,18 @@ const TOC = [
 export default function DriverHireCostsChecklist() {
   const [tocOpen, setTocOpen] = useState(true);
 
-  useEffect(() => {
-    document.title = "Contratar Conductor en Sri Lanka: Costes, Seguridad y Lista de Verificación (2026) | SLTCS";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Guía completa sobre costes y seguridad para contratar un conductor privado en Sri Lanka. Lista de verificación de 7 puntos antes de reservar, precios transparentes 2026.");
-    }
-    // canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist";
-    // hreflang
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/cost-booking-guide/driver-hire-sri-lanka-costs-safety-checklist" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/guide-cout-reservation/location-chauffeur-sri-lanka-couts-securite-checklist" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/kosten-buchung/fahrermiete-sri-lanka-kosten-sicherheit-checkliste" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/cost-booking-guide/driver-hire-sri-lanka-costs-safety-checklist" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      let el = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement | null;
-      if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); document.head.appendChild(el); }
-      el.href = url;
-    });
-    return () => {
-      document.querySelectorAll('link[hreflang]').forEach(el => el.remove());
-    };
-  }, []);
+  useSEO({
+    title: "Contratar Conductor en Sri Lanka: Costes, Seguridad y Lista de Verificación (2026) | SLTCS",
+    description: "Guía completa sobre costes y seguridad para contratar un conductor privado en Sri Lanka. Lista de verificación de 7 puntos antes de reservar, precios transparentes 2026.",
+    path: "/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/cost-booking-guide/driver-hire-sri-lanka-costs-safety-checklist" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/guide-cout-reservation/location-chauffeur-sri-lanka-couts-securite-checklist" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/kosten-buchung/fahrermiete-sri-lanka-kosten-sicherheit-checkliste" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/cost-booking-guide/driver-hire-sri-lanka-costs-safety-checklist" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">

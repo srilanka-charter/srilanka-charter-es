@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Link } from "wouter";
 import ArticleNav from "@/components/ArticleNav";
 
@@ -41,39 +41,18 @@ const ARTICLES = [
 ];
 
 export default function ItinerariosCategory() {
-  useEffect(() => {
-    const prevTitle = document.title;
-    document.title = "Itinerarios Sri Lanka en Conductor Privado | SLTCS";
-    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (!metaDesc) { metaDesc = document.createElement("meta"); metaDesc.name = "description"; document.head.appendChild(metaDesc); }
-    const prevDesc = metaDesc.content;
-    metaDesc.content = "Itinerarios modelo para explorar Sri Lanka en vehículo privado con conductor — desde 5 días hasta 2 semanas.";
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    const prevCanonical = canonical?.href ?? '';
-    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = "https://es.srilanka-charter.com/information/itinerarios";
-    // hreflang
-    const existingHreflangs = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
-    existingHreflangs.forEach((el) => el.remove());
-    const addedHreflangs: HTMLLinkElement[] = [];
-    const hreflangs = [
-      { lang: "es", url: "https://es.srilanka-charter.com/information/itinerarios" },
-      { lang: "en", url: "https://en.srilanka-charter.com/information/model-itinerary" },
-      { lang: "fr", url: "https://fr.srilanka-charter.com/information/itineraires" },
-      { lang: "de", url: "https://de.srilanka-charter.com/information/beispielreiserouten" },
-      { lang: "x-default", url: "https://en.srilanka-charter.com/information/model-itinerary" },
-    ];
-    hreflangs.forEach(({ lang, url }) => {
-      const el = document.createElement("link"); el.rel = "alternate"; el.setAttribute("hreflang", lang); el.href = url; document.head.appendChild(el);
-      addedHreflangs.push(el);
-    });
-    return () => {
-      document.title = prevTitle;
-      metaDesc!.content = prevDesc;
-      canonical!.href = prevCanonical;
-      addedHreflangs.forEach((el) => el.remove());
-    };
-  }, []);
+  useSEO({
+    title: "Itinerarios Sri Lanka en Conductor Privado | SLTCS",
+    description: "Itinerarios modelo para explorar Sri Lanka en vehículo privado con conductor — desde 5 días hasta 2 semanas.",
+    path: "/information/itinerarios",
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/information/itinerarios" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/information/model-itinerary" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/information/itineraires" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/information/beispielreiserouten" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/information/model-itinerary" },
+    ],
+  });
 
   return (
     <div className="sltcs-page">
