@@ -25,7 +25,7 @@ interface Review {
 const REVIEWS: Review[] = [
   {
     id: "aruna",
-    photo: "/manus-storage/review_aruna_78705121.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_aruna_78705121.jpeg",
     driver: "Aruna",
     name: "La Pareja M",
     pax: "2 pasajeros",
@@ -37,7 +37,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "dhammika",
-    photo: "/manus-storage/review_dhammika_f371cfdd.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_dhammika_f371cfdd.jpeg",
     photoPosition: "center 40%",
     driver: "Dhammika",
     name: "La Pareja R",
@@ -50,7 +50,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "kushan",
-    photo: "/manus-storage/review_kushan_f9478373.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_kushan_f9478373.jpeg",
     driver: "Kushan",
     name: "El Grupo B",
     pax: "4 pasajeros",
@@ -62,7 +62,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "lasith",
-    photo: "/manus-storage/review_lasith2_555d5b29.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_lasith2_555d5b29.jpeg",
     driver: "Lasith",
     name: "La Familia W",
     pax: "3 pasajeros",
@@ -74,7 +74,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "malinga",
-    photo: "/manus-storage/review_malinga_5636b125.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_malinga_5636b125.jpeg",
     driver: "Malinga",
     name: "La Pareja S",
     pax: "2 pasajeros",
@@ -86,7 +86,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "ravi",
-    photo: "/manus-storage/review_ravi_b940edfb.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_ravi_b940edfb.jpeg",
     driver: "Ravi",
     name: "El Grupo Y",
     pax: "7 pasajeros",
@@ -98,7 +98,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "smith",
-    photo: "/manus-storage/review_smith_3ba6750f.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_smith_3ba6750f.jpeg",
     driver: "Smith",
     name: "La Familia K",
     pax: "5 pasajeros",
@@ -110,7 +110,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "asanka",
-    photo: "/manus-storage/review_asanka_couple_3ef4bb3c.png",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_asanka_couple_3ef4bb3c.png",
     photoPosition: "center 30%",
     driver: "Asanka",
     name: "La Pareja P",
@@ -123,7 +123,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "ranjana",
-    photo: "/manus-storage/review_ranjana_50bce7fd.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_ranjana_50bce7fd.jpeg",
     driver: "Ranjana",
     name: "La Pareja H",
     pax: "2 pasajeros",
@@ -135,7 +135,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "chamara-nine-arch",
-    photo: "/manus-storage/voice_review_nine_arch_7dfe057f.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_nine_arch_7dfe057f.jpg",
     photoPosition: "center 30%",
     driver: "Chamara",
     name: "El Grupo K",
@@ -148,7 +148,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "pradeep-boat-couple",
-    photo: "/manus-storage/voice_review_boat_couple_0be07267.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_boat_couple_0be07267.jpg",
     photoPosition: "center 40%",
     driver: "Pradeep",
     name: "La Pareja L",
@@ -161,7 +161,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "nuwan-wetland-jp",
-    photo: "/manus-storage/voice_review_wetland_jp_372bc3f0.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_wetland_jp_372bc3f0.jpg",
     photoPosition: "center 35%",
     driver: "Nuwan",
     name: "La Pareja T",
@@ -174,7 +174,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "kasun-elephant-couple",
-    photo: "/manus-storage/voice_review_elephant_couple_efa97b04.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_elephant_couple_efa97b04.jpg",
     photoPosition: "center 25%",
     driver: "Kasun",
     name: "La Pareja F",
@@ -187,7 +187,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "dilshan-jeep-couple",
-    photo: "/manus-storage/voice_review_jeep_couple_eb1a3cff.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_jeep_couple_eb1a3cff.jpg",
     photoPosition: "center 40%",
     driver: "Anjana",
     name: "La Pareja M",
@@ -200,7 +200,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "sanjeewa-oxcart-couple",
-    photo: "/manus-storage/voice_review_oxcart_couple_1b0751ff.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_oxcart_couple_1b0751ff.jpg",
     photoPosition: "center 50%",
     driver: "Sanjeewa",
     name: "La Pareja B",
@@ -213,7 +213,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "ranjana-boat-group",
-    photo: "/manus-storage/voice_review_ranjana_boat_group_e98c1415.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_ranjana_boat_group_e98c1415.jpg",
     photoPosition: "center 40%",
     driver: "Ranjana",
     name: "El Grupo S",
@@ -226,7 +226,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "chami-airport-group",
-    photo: "/manus-storage/voice_review_chami_airport_group_55b90413.jpg",
+    photo: "https://en.srilanka-charter.com/manus-storage/voice_review_chami_airport_group_55b90413.jpg",
     photoPosition: "center 35%",
     driver: "Chami",
     name: "El Grupo Y",
@@ -239,7 +239,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "eranga",
-    photo: "/manus-storage/review1_r_family_eranga_a3545b4c.png",
+    photo: "https://en.srilanka-charter.com/manus-storage/review1_r_family_eranga_a3545b4c.png",
     driver: "Eranga",
     name: "La Familia R",
     pax: "4 pasajeros",
@@ -251,7 +251,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "lasith-march26",
-    photo: "/manus-storage/review_lasith_family_ae2d2464.jpeg",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_lasith_family_ae2d2464.jpeg",
     driver: "Lasith",
     name: "La Familia W",
     pax: "3 pasajeros",
@@ -263,7 +263,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "ranjana-home",
-    photo: "/manus-storage/review_ranjana_new_2b654dea.png",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_ranjana_new_2b654dea.png",
     driver: "Ranjana",
     name: "La Pareja H",
     pax: "2 pasajeros",
@@ -275,7 +275,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "priyanth",
-    photo: "/manus-storage/review_priyantha_couple_e0a47aaf.png",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_priyantha_couple_e0a47aaf.png",
     driver: "Priyanth",
     name: "A&S",
     pax: "2 pasajeros",
@@ -287,7 +287,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "indika",
-    photo: "/manus-storage/review5_t_couple_indika_519f1510.png",
+    photo: "https://en.srilanka-charter.com/manus-storage/review5_t_couple_indika_519f1510.png",
     driver: "Indika",
     name: "La Pareja T",
     pax: "2 pasajeros",
@@ -299,7 +299,7 @@ const REVIEWS: Review[] = [
   },
   {
     id: "chamil",
-    photo: "/manus-storage/review_dfamily_chamil_9214e24c.png",
+    photo: "https://en.srilanka-charter.com/manus-storage/review_dfamily_chamil_9214e24c.png",
     driver: "Chamil",
     name: "La Familia D",
     pax: "5 pasajeros",
