@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Thanks from "./pages/Thanks";
 import Pricing from "./pages/Pricing";
 import FAQPage from "./pages/FAQPage";
+import VoicePage from "./pages/VoicePage";
 import PrivateDriverHowToHire from "./pages/info/PrivateDriverHowToHire";
 import CarHireWithDriverGuide from "./pages/info/CarHireWithDriverGuide";
 import ChauffeurGuideDriverVsGuide from "./pages/info/ChauffeurGuideDriverVsGuide";
@@ -33,6 +34,7 @@ function Router() {
       <Route path={"/gracias"} component={Thanks} />
       <Route path={"/price"} component={Pricing} />
       <Route path={"/faq"} component={FAQPage} />
+      <Route path={"/voice"} component={VoicePage} />
       {/* Information category pages */}
       <Route path={"/information/guia-conductor-privado"} component={PrivateDriverGuideCategory} />
       <Route path={"/information/guia-costes-reserva"} component={CostBookingGuideCategory} />

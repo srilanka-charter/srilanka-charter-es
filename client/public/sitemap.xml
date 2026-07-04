@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ホームページ -->
+  <url>
+    <loc>https://es.srilanka-charter.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://es.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nl.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ru.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sltcs.srilanka-charter.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://en.srilanka-charter.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 料金ページ -->
+  <url>
+    <loc>https://es.srilanka-charter.com/price</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://es.srilanka-charter.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.srilanka-charter.com/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://en.srilanka-charter.com/price"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- VOICEページ（お客様の声） -->
+  <url>
+    <loc>https://es.srilanka-charter.com/voice</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://es.srilanka-charter.com/voice"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.srilanka-charter.com/voice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://en.srilanka-charter.com/voice"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- FAQページ -->
+  <url>
+    <loc>https://es.srilanka-charter.com/faq</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://es.srilanka-charter.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.srilanka-charter.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://en.srilanka-charter.com/faq"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 情報カテゴリー：プライベートドライバーガイド -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/guia-conductor-privado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 情報カテゴリー：コスト・予約ガイド -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/guia-costes-reserva</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 情報カテゴリー：家族・グループ旅行 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/viajes-familia-grupos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 情報カテゴリー：旅行のヒントと安全 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/consejos-viaje-seguridad</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 情報カテゴリー：旅程 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/itinerarios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 記事：プライベートドライバーの雇い方 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/guia-conductor-privado/como-contratar-conductor-privado-sri-lanka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：ドライバー付きレンタカー完全ガイド -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/guia-conductor-privado/alquiler-coche-conductor-sri-lanka-guia-completa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：ショーファー vs ガイド -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/guia-conductor-privado/chofer-guia-sri-lanka-conductor-vs-guia-turistico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：ドライバー雇用コストチェックリスト -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/guia-costes-reserva/contratar-conductor-sri-lanka-costes-seguridad-checklist</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：家族・グループ向けバン -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/viajes-familia-grupos/alquiler-furgoneta-conductor-sri-lanka-familias-grupos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：旅程 4泊5日 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-4-noches-5-dias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：旅程 5泊6日 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-5-noches-6-dias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：旅程 6泊7日 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-6-noches-7-dias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：文化の三角地帯ルート -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/itinerarios/ruta-triangulo-cultural-sri-lanka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：旅程 10日間〜2週間 -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/itinerarios/itinerario-sri-lanka-10-dias-2-semanas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 記事：スリランカ訪問のベストシーズン -->
+  <url>
+    <loc>https://es.srilanka-charter.com/information/consejos-viaje-seguridad/mejor-epoca-para-visitar-sri-lanka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

@@ -6,6 +6,7 @@ const URLS = [
   { loc: "/", changefreq: "weekly", priority: "1.0" },
   { loc: "/price", changefreq: "monthly", priority: "0.8" },
   { loc: "/faq", changefreq: "monthly", priority: "0.7" },
+  { loc: "/voice", changefreq: "monthly", priority: "0.9" },
   // Information category pages
   { loc: "/information/guia-conductor-privado", changefreq: "monthly", priority: "0.8" },
   { loc: "/information/guia-costes-reserva", changefreq: "monthly", priority: "0.8" },

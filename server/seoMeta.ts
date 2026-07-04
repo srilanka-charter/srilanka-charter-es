@@ -114,6 +114,32 @@ const PAGE_META_MAP: Record<string, PageMeta> = {
       },
     ],
   },
+  "/voice": {
+    title: "Opiniones de Clientes | Conductor Privado Sri Lanka | SLTCS",
+    description:
+      "Opiniones reales de viajeros que han explorado Sri Lanka con conductores privados de SLTCS. Puntuación general 4.9 — Conductor 5.0 · Vehículo 4.8 · Operador 4.8.",
+    canonical: `${BASE_ES}/voice`,
+    hreflangs: [
+      { hreflang: "es", href: `${BASE_ES}/voice` },
+      { hreflang: "en", href: `${BASE_EN}/voice` },
+      { hreflang: "x-default", href: `${BASE_EN}/voice` },
+    ],
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "SLTCS – Alquiler de Coche con Conductor en Sri Lanka",
+        url: `${BASE_ES}`,
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          bestRating: "5",
+          worstRating: "1",
+          ratingCount: "22",
+        },
+      },
+    ],
+  },
   "/information/guia-conductor-privado": {
     title: "Guía de Conductor Privado en Sri Lanka | SLTCS",
     description:

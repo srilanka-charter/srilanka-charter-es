@@ -106,6 +106,7 @@ export default function Navbar() {
             </div>
             <a onClick={() => scrollTo("vehicles")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">VEHÍCULOS</a>
             <a href="/price" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">PRECIO</a>
+            <a href="/voice" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">VOICE</a>
             {/* INFORMACIÓN dropdown */}
             <div
               className="relative"
@@ -190,6 +191,7 @@ export default function Navbar() {
             <a onClick={() => scrollTo("itineraries")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">ITINERARIO MODELO</a>
             <a onClick={() => scrollTo("vehicles")} className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">VEHÍCULOS</a>
             <a href="/price" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">PRECIO</a>
+            <a href="/voice" className="block px-4 py-3 text-xs font-semibold tracking-widest uppercase text-white/80 hover:text-[#C9A84C] transition-colors cursor-pointer">VOICE</a>
             {/* INFORMACIÓN mobile */}
             <div className="border-t border-white/5">
               <p className="px-4 py-2 text-xs font-semibold tracking-widest uppercase text-white/40">INFORMACIÓN</p>

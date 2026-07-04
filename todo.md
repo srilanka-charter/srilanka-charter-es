@@ -85,3 +85,11 @@
 
 ### 【中】構造化データ確認・強化
 - [ ] トップページにOrganization/LocalBusiness JSON-LDを追加する
+
+## VOICEページ作成（2026年7月5日）
+
+- [x] VoicePage.tsx（/voice）作成：英語版と同じデザインでスペイン語翻訳・22件のレビュー・評価バー・写真カード
+- [x] App.tsxに/voiceルート追加
+- [x] Navbar.tsxにVOICEリンクをPRECIOの右に追加（デスクトップ・モバイル両方）
+- [x] useSEO設定（title・description・canonical・hreflang・JSON-LD Review schema）
+- [x] sitemap.xmlに/voiceを追加（同時にsitemap.xmlとrobots.txtを新規作成）

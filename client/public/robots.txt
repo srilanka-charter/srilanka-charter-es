@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# noindexページ（インデックス不要）
+Disallow: /gracias
+Disallow: /404
+
+Sitemap: https://es.srilanka-charter.com/sitemap.xml
