@@ -2030,3 +2030,59 @@ footer {
 .article-price-cta-btn:hover {
   background: #e8c84a;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   VOICE PAGE (Opiniones) — same styles as en.srilanka-charter.com/voice
+───────────────────────────────────────────────────────────────────────────── */
+.voice-page{color:#1a1a1a;background:#faf7f2;min-height:100vh;font-family:Inter,sans-serif}
+.voice-header{z-index:100;background:#0d0d0d;border-bottom:1px solid #c9a84c33;position:sticky;top:0}
+.voice-header-inner{justify-content:space-between;align-items:center;gap:1rem;max-width:1280px;height:64px;margin:0 auto;padding:0 2rem;display:flex}
+.voice-back-link{color:#c9a84c;letter-spacing:.04em;white-space:nowrap;font-size:.85rem;font-weight:600;text-decoration:none;transition:opacity .2s}
+.voice-back-link:hover{opacity:.75}
+.voice-site-title{color:#fffc;letter-spacing:.02em;text-align:right;font-size:.78rem;text-decoration:none}
+.voice-hero{color:#fff;text-align:center;background:#0d0d0d;padding:72px 2rem 64px}
+.voice-hero-eyebrow{letter-spacing:.25em;color:#c9a84c;margin-bottom:16px;font-size:.78rem;font-weight:600}
+.voice-hero h1{color:#fff;margin:0 0 16px;font-family:Playfair Display,serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.2}
+.voice-hero h1 em{color:#c9a84c;font-style:italic}
+.voice-hero-sub{color:#ffffffb3;max-width:560px;margin:0 auto 40px;font-size:1rem;line-height:1.7}
+.voice-summary-bar{background:#ffffff0d;border:1px solid #c9a84c40;border-radius:12px;justify-content:center;align-items:center;max-width:480px;margin:0 auto;padding:20px 40px;display:flex}
+.voice-summary-item{flex-direction:column;align-items:center;gap:4px;padding:0 32px;display:flex}
+.voice-summary-num{color:#c9a84c;font-family:Playfair Display,serif;font-size:1.8rem;font-weight:700}
+.voice-summary-label{color:#ffffffbf;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem}
+.voice-summary-divider{background:#c9a84c40;width:1px;height:40px}
+.voice-reviews-section{max-width:1280px;margin:0 auto;padding:64px 2rem}
+.voice-reviews-grid{flex-direction:column;gap:40px;display:flex}
+.voice-card{background:#fff;border:1px solid #e8e2d9;border-radius:16px;flex-direction:column;transition:box-shadow .3s;display:flex;overflow:hidden;box-shadow:0 4px 24px #0000000f}
+.voice-card:hover{box-shadow:0 8px 40px #0000001a}
+.voice-card-photo-wrap{aspect-ratio:4/3;background:#1a1a1a;flex-shrink:0;width:100%;position:relative;overflow:hidden}
+.voice-card-photo{object-fit:cover;width:100%;height:100%;display:block}
+.voice-card-overall-badge{background:#0d0d0dd9;border:1px solid #c9a84c80;border-radius:8px;align-items:center;gap:4px;padding:6px 10px;display:flex;position:absolute;bottom:12px;right:12px}
+.voice-badge-star{color:#c9a84c;font-size:1rem}
+.voice-badge-num{color:#fff;font-size:.9rem;font-weight:700}
+.voice-card-content{flex-direction:column;gap:16px;padding:32px;display:flex}
+.voice-card-driver{color:#1a1a1a;font-family:Playfair Display,serif;font-size:1.1rem;font-weight:700}
+.voice-card-meta{color:#888;margin-top:4px;font-size:.82rem}
+.voice-card-route{color:#5a5a5a;margin-top:2px;font-size:.82rem}
+.voice-card-quote{color:#2a2a2a;border-left:3px solid #c9a84c;margin:0;padding-left:16px;font-family:Playfair Display,serif;font-size:1.05rem;font-style:italic;line-height:1.6}
+.voice-card-body{color:#5a5a5a;margin:0;font-size:.88rem;line-height:1.8}
+.voice-ratings{background:#faf7f2;border:1px solid #e8e2d9;border-radius:10px;flex-direction:column;gap:12px;padding:16px 20px;display:flex}
+.voice-total-score{align-items:center;gap:10px;display:flex}
+.voice-total-label{color:#888;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;font-weight:600}
+.voice-total-num{color:#c9a84c;font-family:Playfair Display,serif;font-size:1.4rem;font-weight:700}
+.voice-total-stars{letter-spacing:1px;font-size:1rem}
+.voice-breakdown{flex-direction:column;gap:8px;display:flex}
+.voice-breakdown-row{align-items:center;gap:10px;display:flex}
+.voice-breakdown-label{color:#6a6a6a;flex-shrink:0;width:64px;font-size:.78rem}
+.voice-breakdown-bar-wrap{background:#e8e2d9;border-radius:3px;flex:1;height:6px;overflow:hidden}
+.voice-breakdown-bar{background:linear-gradient(90deg,#c9a84c,#e8c96a);border-radius:3px;height:100%}
+.voice-breakdown-score{color:#2a2a2a;text-align:right;width:28px;font-size:.78rem;font-weight:600}
+.voice-cta-section{text-align:center;background:#0d0d0d;padding:72px 2rem}
+.voice-cta-title{color:#fff;margin:0 0 12px;font-family:Playfair Display,serif;font-size:clamp(1.5rem,3vw,2rem)}
+.voice-cta-sub{color:#fffc;margin:0 0 32px;font-size:.95rem}
+.voice-cta-btn{color:#0d0d0d;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,#c9a84c,#e8c96a);border-radius:6px;padding:14px 40px;font-size:.9rem;font-weight:700;text-decoration:none;transition:opacity .2s,transform .2s;display:inline-block}
+.voice-cta-btn:hover{opacity:.85;transform:translateY(-1px)}
+.voice-footer{text-align:center;background:#0d0d0d;border-top:1px solid #c9a84c26;padding:24px 2rem}
+.voice-footer p{color:#ffffffb8;margin:0;font-size:.78rem}
+.voice-footer a{color:#c9a84cb3;text-decoration:none}
+@media (min-width:768px){.voice-card{flex-direction:row}.voice-card-photo-wrap{aspect-ratio:unset;width:360px;min-height:400px;flex-shrink:0}}
+@media (max-width:768px){.voice-card-photo-wrap{min-height:220px;max-height:260px}.voice-card-content{padding:20px}.voice-summary-item{padding:0 16px}.voice-summary-num{font-size:1.4rem}.voice-header-inner{padding:0 1rem}.voice-site-title{display:none}.voice-reviews-section{padding:40px 1rem}}
