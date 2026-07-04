@@ -162,6 +162,7 @@ function Navbar() {
             )}
           </li>
           <li><a href="/price">PRECIO</a></li>
+          <li><a href="/voice">OPINIONES</a></li>
           <li className="nav-dropdown" onMouseEnter={() => setInfoOpen(true)} onMouseLeave={() => setInfoOpen(false)}>
             <button>INFORMACIÓN</button>
             {infoOpen && (
@@ -221,6 +222,7 @@ function Navbar() {
             )}
           </div>
           <a href="/price">Precio</a>
+          <a href="/voice">Opiniones</a>
           <div className="mobile-accordion">
             <button
               className="mobile-accordion-btn"

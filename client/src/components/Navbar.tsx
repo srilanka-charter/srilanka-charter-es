@@ -71,14 +71,14 @@ export default function Navbar() {
             SLTCS｜Alquiler de coche con conductor en Sri Lanka
           </a>
 
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-5">
             <a onClick={() => scrollTo("plans")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">PLANES</a>
             <div className="relative">
               <button
                 onClick={() => setItineraryOpen(!itineraryOpen)}
                 className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors flex items-center gap-1"
               >
-                ITINERARIO MODELO
+                ITINERARIOS
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -104,7 +104,6 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <a onClick={() => scrollTo("vehicles")} className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">VEHÍCULOS</a>
             <a href="/price" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">PRECIO</a>
             <a href="/voice" className="text-white/80 hover:text-[#C9A84C] text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer">OPINIONES</a>
             {/* INFORMACIÓN dropdown */}
