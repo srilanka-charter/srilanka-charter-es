@@ -122,6 +122,9 @@ const PAGE_META_MAP: Record<string, PageMeta> = {
     hreflangs: [
       { hreflang: "es", href: `${BASE_ES}/voice` },
       { hreflang: "en", href: `${BASE_EN}/voice` },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/voice" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/voice" },
+      { hreflang: "nl", href: "https://nl.srilanka-charter.com/voice" },
       { hreflang: "x-default", href: `${BASE_EN}/voice` },
     ],
     jsonLd: [

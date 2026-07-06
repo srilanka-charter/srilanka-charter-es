@@ -46,6 +46,7 @@ const BASE_ES = "https://es.srilanka-charter.com";
 const BASE_EN = "https://en.srilanka-charter.com";
 const BASE_FR = "https://fr.srilanka-charter.com";
 const BASE_DE = "https://de.srilanka-charter.com";
+const BASE_NL = "https://nl.srilanka-charter.com";
 
 function defaultHreflangs(path: string): HreflangEntry[] {
   return [
@@ -53,6 +54,7 @@ function defaultHreflangs(path: string): HreflangEntry[] {
     { hreflang: "en", href: `${BASE_EN}${path}` },
     { hreflang: "fr", href: `${BASE_FR}${path}` },
     { hreflang: "de", href: `${BASE_DE}${path}` },
+    { hreflang: "nl", href: `${BASE_NL}${path}` },
     { hreflang: "x-default", href: `${BASE_EN}${path}` },
   ];
 }

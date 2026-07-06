@@ -408,6 +408,14 @@ export default function VoicePage() {
       "Lee las opiniones reales de viajeros que han explorado Sri Lanka con los conductores privados de SLTCS. Puntuación global 4.9/5 basada en 22 reseñas verificadas.",
     path: "/voice",
     noindex: false,
+    hreflangs: [
+      { hreflang: "es", href: "https://es.srilanka-charter.com/voice" },
+      { hreflang: "en", href: "https://en.srilanka-charter.com/voice" },
+      { hreflang: "fr", href: "https://fr.srilanka-charter.com/voice" },
+      { hreflang: "de", href: "https://de.srilanka-charter.com/voice" },
+      { hreflang: "nl", href: "https://nl.srilanka-charter.com/voice" },
+      { hreflang: "x-default", href: "https://en.srilanka-charter.com/voice" },
+    ],
     jsonLdList: [
       {
         "@context": "https://schema.org",
