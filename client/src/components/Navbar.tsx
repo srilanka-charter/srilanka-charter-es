@@ -8,6 +8,7 @@ const languages = [
   { label: "Dutch", url: "https://nl.srilanka-charter.com/", current: false },
   { label: "Russian", url: "https://ru.srilanka-charter.com/", current: false },
   { label: "Japanese", url: "https://sltcs.srilanka-charter.com/", current: false },
+  { label: "Korean", url: "https://ko.srilanka-charter.com/", current: false },
 ];
 
 export default function Navbar() {

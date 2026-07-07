@@ -11,6 +11,7 @@ const BASE_ES = "https://es.srilanka-charter.com";
 const BASE_EN = "https://en.srilanka-charter.com";
 const BASE_FR = "https://fr.srilanka-charter.com";
 const BASE_DE = "https://de.srilanka-charter.com";
+const BASE_KO = "https://ko.srilanka-charter.com";
 
 interface HreflangEntry {
   hreflang: string;
@@ -31,6 +32,7 @@ function hreflangSet(path: string): HreflangEntry[] {
     { hreflang: "en", href: `${BASE_EN}${path}` },
     { hreflang: "fr", href: `${BASE_FR}${path}` },
     { hreflang: "de", href: `${BASE_DE}${path}` },
+    { hreflang: "ko", href: `${BASE_KO}${path}` },
     { hreflang: "x-default", href: `${BASE_EN}${path}` },
   ];
 }
@@ -51,6 +53,7 @@ const PAGE_META_MAP: Record<string, PageMeta> = {
       { hreflang: "ms", href: "https://ms.srilanka-charter.com/" },
       { hreflang: "sv", href: "https://sv.srilanka-charter.com/" },
       { hreflang: "ja", href: "https://sltcs.srilanka-charter.com/" },
+      { hreflang: "ko", href: `${BASE_KO}/` },
       { hreflang: "x-default", href: `${BASE_EN}/` },
     ],
     jsonLd: [
@@ -125,6 +128,7 @@ const PAGE_META_MAP: Record<string, PageMeta> = {
       { hreflang: "fr", href: "https://fr.srilanka-charter.com/voice" },
       { hreflang: "de", href: "https://de.srilanka-charter.com/voice" },
       { hreflang: "nl", href: "https://nl.srilanka-charter.com/voice" },
+      { hreflang: "ko", href: `${BASE_KO}/voice` },
       { hreflang: "x-default", href: `${BASE_EN}/voice` },
     ],
     jsonLd: [

@@ -127,6 +127,7 @@ function Navbar() {
     { label: "Bahasa Melayu", url: "https://ms.srilanka-charter.com/" },
     { label: "Svenska", url: "https://sv.srilanka-charter.com/" },
     { label: "日本語", url: "https://sltcs.srilanka-charter.com/" },
+    { label: "한국어", url: "https://ko.srilanka-charter.com/" },
   ];
 
   useEffect(() => {
@@ -1363,6 +1364,12 @@ export default function Home() {
       { hreflang: "en", href: "https://en.srilanka-charter.com/" },
       { hreflang: "fr", href: "https://fr.srilanka-charter.com/" },
       { hreflang: "de", href: "https://de.srilanka-charter.com/" },
+      { hreflang: "ru", href: "https://ru.srilanka-charter.com/" },
+      { hreflang: "nl", href: "https://nl.srilanka-charter.com/" },
+      { hreflang: "ms", href: "https://ms.srilanka-charter.com/" },
+      { hreflang: "sv", href: "https://sv.srilanka-charter.com/" },
+      { hreflang: "ja", href: "https://sltcs.srilanka-charter.com/" },
+      { hreflang: "ko", href: "https://ko.srilanka-charter.com/" },
       { hreflang: "x-default", href: "https://en.srilanka-charter.com/" },
     ],
   });
